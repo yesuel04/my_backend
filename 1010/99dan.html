@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구구단</title>
+<style>
+    
+</style>   
+<script>
+    
+    document.write("<table border='1'>"); //html 문서 출력 메서드
+		document.write("<tr>"); //첫번째 줄
+		for (i = 2; i < 10; i++) { //for 문 이용해 3~9단 출력
+			document.write("<td>"); //첫번째 줄 칸
+			document.write(i + "단"); 
+			document.write("</td>");
+		}
+		document.write("</tr>"); 
+		document.write("<tr>"); //두번째 줄
+		for (dan = 2; dan < 10; dan++) { //이중 for 문 이용해 @*@ =@@ 출력
+			document.write("<td>"); //두번째 줄 칸
+			for (i = 1; i < 10; i++) {
+				document.write(dan + " * " + i + " = " + dan * i + "<br/>");
+			}
+			document.write("</td>");
+		}
+		document.write("</tr>");
+		document.write("</table>");
+
+</script>    
+</head>
+<body>
+    
+</body>
+</html>
