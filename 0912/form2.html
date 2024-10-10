@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            list-style: none;
+        }
+        li{
+            line-height: 50px;
+        }
+        label{
+            width: 120px;
+            float: left;
+        }
+        /* 레이블에 넓이와 float 설정을 적용하기 */
+        
+    </style>
+</head>
+<body>
+    <form action="" method="post">
+        <ul>
+            <li>
+                <label for="r-name">이름</label>
+                <input type="text" name="r-name" id="r-name">
+            </li>
+            <li>
+                <label for="r-id">아이디</label>
+                <input type="text" name="r-id" id="r-id">
+            </li>
+            <li>
+                <label for="r-pw">패스워드</label>
+                <input type="password" name="r-pw" id="r-pw">
+            </li>
+            <li>
+                <label for="r-phone">휴대폰</label>
+                <input type="text" name="r-phone" id="r-phone">
+            </li>
+            <li>
+                <label for="r-email">이메일</label>
+                <input type="email" name="r-email" id="r-email">
+            </li>
+            <li>
+                <label for="r-addr">주소</label>
+                <input type="text" name="r-addr" id="r-addr">
+            </li>
+            <li>
+                <label for="d-day">배송일 지정</label>
+                <input type="date" name="d-day" id="d-day">
+            </li>
+            <li>
+                <label for="memo">남기고 싶은 말</label>
+                <textarea name="memo" id="memo" cols="40" rows="4"></textarea>
+            </li>
+            <li>
+                <input type="submit" value="예약하기">
+            </li>
+        </ul>
+    </form>
+</body>
+</html>

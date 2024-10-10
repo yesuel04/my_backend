@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Noto Sans KR", sans-serif;
+}
+ul, li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+.cf::after{
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+
+#wrap{
+    width: 100%;
+}
+.franchise{
+    width: 100%;
+    padding: 50px 0;
+}
+.inner{
+    width: 1440px;
+    margin: 0 auto;
+}
+.inner .title{
+    width: 100%;
+    text-align: center;
+}
+.title h2{
+    color: #1e1e1e;
+    font-size: 43px;
+    font-family: "Noto Serif", serif;
+}
+
+.card_list{
+    padding: 50px 0;
+}
+.card_list ul{
+    width: 100%;
+}
+.card_list ul li{
+    float: left;
+    width: 341px;
+    height: 430px;
+    border: 1px solid #333;
+    box-sizing: border-box;
+    margin-right: 25px;
+    text-align: center;
+
+}
+.card_list ul li:last-child{
+    margin-right: 0;
+}
+
+.card_list ul li .pic{
+    padding-bottom: 10px;
+    padding-top: 50px;
+}
+.card_list ul li .num span{
+    display: block;
+    margin: 20px auto;
+    background: #003e73;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+}
+
+.card_list ul li .txt h3{
+    font-size: 20px;
+    font-weight: 500;
+    padding-bottom: 15px;
+    color: #003e73;
+}
+.card_list ul li .txt p{
+    font-weight: 300;
+}
+
+.inner .button_wrap{
+    text-align: center;
+}
+.inner .button_wrap p{
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+.inner .button_wrap span{
+    color: #003e73;
+    font-weight: bold;
+}
+
+.inner .button_wrap a{
+    display: block;
+    margin: 0 auto;
+    width: 340px;
+    height: 60px;
+    line-height: 60px;
+    color: #fff;
+    background-color: #003e73;
+    border: 1px solid transparent;
+}
+.inner .button_wrap a:hover{
+    color: #003e73;
+    border: 1px solid #003e73;
+    background-color: #fff;
+}
+
+
+/* footer 영역 */
+.footer{
+    background: #003e73;
+    color: #fff;
+}
+.footer .inner{
+    width: 1440px;
+    margin: 0 auto;
+    position: relative;
+    box-sizing: border-box;
+    padding: 50px 0;
+}
+.footer .inner .logo{
+    float: left;
+    width: 220px;
+}
+.footer .inner .address{
+    float: left;
+    width: 960px;
+    box-sizing: border-box;
+    padding: 0 120px;
+}
+
+.address .privacy{
+   margin-top: -15px; 
+}
+.address .privacy a{
+    color: red;
+}
+.address p{
+    padding-top: 15px;
+}
+.address p span{
+    position: relative;
+    display: inline-block;
+    margin-right: 7px;
+    margin-bottom: 4px;
+}
+.address p span.bar::before{
+    content: '|';
+    display: inline-block;
+    margin-right: 7px;
+}
+
+.footer .inner .family{
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    top: 60px;
+    right: 0;
+    border: 1px solid #fff;
+    background: #003e73;
+}
+.family label{
+    position: absolute;
+    width: 100%;
+    padding: 7px 10px 11px;
+    top: 0;
+    left: 0;
+    color: #fff;
+    box-sizing: border-box;
+}
+.family select{
+    width: 100%;
+    height: auto;
+    padding: 11px 10px;
+    line-height: normal;
+    border: 0;
+    opacity: 0;
+    appearance: none;
+    cursor: pointer;
+}
+.footer .family::after {
+    position: absolute;
+    content: " ";
+    width: 10px;
+    height: 10px;
+    right: 15px;
+    top: 15px;
+    background-image: url(../images/ico.png);
+    background-position: -300px 0;
+}

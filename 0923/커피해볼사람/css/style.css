@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.wrap{
+    width: 900px;
+    margin: 0 auto;
+}
+header{
+    height: 300px;
+    background: url(../images/top.jpg);
+    position: relative;
+}
+h1.logo{
+    position: absolute;
+    bottom: 50px;
+    /* top: 50px; */
+    right: 50px;
+    color: #fff;
+}
+nav{
+    width: 900px;
+    height: 70px;
+    background-color: #2a1d0a;
+}
+nav ul{
+    list-style: none;
+}
+nav ul li{
+    float: left;
+    margin-top: 15px;
+    margin-left: 23px;
+}
+nav ul li a{
+    display: block;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+}
+nav ul li a:hover{
+    background-color: #fff;
+    color: #000;
+    text-decoration: underline;
+}
+.content{
+    overflow: hidden;
+}
+section{
+    width: 650px;
+    height: 550px;
+    background-color: gray;
+    float: left;
+}
+section h3{
+    margin: 20px 0 0 0;
+    text-align: center;
+}
+section article{
+    width: 270px;
+    height: 200px;
+    background-color: #fff;
+    border: 1px solid #000;
+    float: left;
+    margin: 20px 0 0 20px;
+    padding: 10px;
+}
+section article h4{
+    background: url(../images/kong.png) no-repeat 0 0;
+    padding-left: 30px;
+    margin-bottom: 10px;
+}
+section article p{
+    line-height: 170%;
+    text-align: justify;
+}
+aside{
+    width: 250px;
+    height: 550px;
+    background-color: #6d460b;
+    float: left;
+    text-align: center;
+}
+aside h3{
+    margin: 20px 0 20px 0;
+}
+aside img{
+    width: 220px;
+    padding-bottom: 10px;
+}
+footer{
+    /* clear: both; */
+    background-color: #333;
+    height: 60px;
+    color: #fff;
+    text-align: center;
+    line-height: 60px;
+    margin-top: 100px;
+}

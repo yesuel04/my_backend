@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var mon = prompt("현재는 몇 월 입니까?", "0");
+
+        if(mon>=9 && mon<=11){
+            document.write("독서의 계절 가을이네요~");
+        }
+        else if(mon>=6 && mon<=8){
+            document.write("더위 조심하며 여름 휴가 보내세요~");
+        }
+        else if(mon>=3 && mon<=5){
+            document.write("따뜻하고 포근한 봄이네요~");
+        }
+        else if(mon == 12 || mon == 1 || mon == 2){
+            document.write("감기 조심하며 겨울 따뜻하게 보내세요~");
+        }else{
+            document.write("1월부터 12월까지 중에서 입력해주세요!");
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

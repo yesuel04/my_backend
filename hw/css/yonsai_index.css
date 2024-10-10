@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Noto Sans KR", sans-serif;
+}
+.cf::after{
+	display: block;
+	clear: both;
+	content:" ";
+}
+ul, li{
+	list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #555;
+}
+
+.header_out{
+    width: 100%;
+    position: relative;
+}
+header{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+/* 상단 네비 */
+.s_nav{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 33px;
+    border-bottom: 1px solid #ddd;
+    color: #333;
+}
+.s_nav .lnb{
+    float: right;
+    margin-top: 10px;
+    margin-right: 50px;
+}
+.s_nav .lnb li{
+    float: left;
+    font-size: 13px;
+    padding: 0 10px;
+}
+
+/* 로고 */
+header .logo{
+    top: 33px;
+    position: absolute;
+    width: 1200px;
+    height: 50px;
+    padding-top: 10px;
+}
+header .logo img{
+    width: 250px;
+    height: 50px;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* 네비게이션 */
+.main_menu{
+    position: absolute;
+    top: 95px;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+}
+
+.gnb{
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+.gnb>li{
+    float: left;
+    position: relative;
+}
+.gnb>li>a{
+    display: block;
+    width: 170px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 1em;
+    font-weight: 500;
+    color: #333;
+}
+
+.gnb li ul{
+    position: absolute;
+    height: 0;
+    border-left: 1px solid #ddd;
+    overflow: hidden;
+}
+.gnb li:nth-child(7) ul{
+    border-right: 1px solid #ddd;
+}
+
+.gnb:hover li ul{
+    display: block;
+    height: 220px;
+    transition: all 0.3s;
+}
+
+.gnb li ul li{
+    width: 170px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 0.9em;
+}
+.gnb li ul li:nth-child(1){
+    padding-top: 10px;
+}
+.gnb li ul li a:hover{
+    color: red;
+}
+
+.main_menu .shadow{
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #fff;
+    transition: all 0.3s;
+    z-index: -1;
+}
+
+.gnb:hover + .shadow{
+    height: 220px;
+    border-bottom: 1px solid #ddd;
+}
+
+
+/* 메인 이미지 */
+section .main1{
+    width: 1800px;
+    height: 600px;
+    position: relative;
+    top: 156px;
+    margin: 0 auto;
+    z-index: -10;
+}
+section .main1 img{
+    display: block;
+}
+    

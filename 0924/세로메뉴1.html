@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>세로메뉴</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul, li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: #333;
+        }
+
+        section{
+            width: 700px;
+            height: 500px;
+            border: 1px solid #333;
+            margin: 100px auto 0;
+            position: relative;
+        }
+        .gnb li a{
+            display: block;
+            width: 150px;
+            height: 40px;
+            background-color: beige;
+            line-height: 40px;
+            text-indent: 20px;
+        }
+        .gnb>li>a{
+            background-color: coral;
+            color: #eee;
+        }
+
+        .gnb>li{
+            
+        }
+        .gnb li ul{
+            position: absolute;
+            top: 0;
+            left: 150px;
+            display: none;
+        }
+        .gnb li:hover ul{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <ul class="gnb">
+            <li><a href="#">main_menu1</a>
+                <ul>
+                    <li><a href="#">sub_menu1-1</a></li>
+                    <li><a href="#">sub_menu1-2</a></li>
+                    <li><a href="#">sub_menu1-3</a></li>
+                    <li><a href="#">sub_menu1-4</a></li>
+                </ul>
+            </li>
+            <li><a href="#">main_menu2</a>
+                <ul>
+                    <li><a href="#">sub_menu2-1</a></li>
+                    <li><a href="#">sub_menu2-2</a></li>
+                    <li><a href="#">sub_menu2-3</a></li>
+                    <li><a href="#">sub_menu2-4</a></li>
+                </ul>
+            </li>
+            <li><a href="#">main_menu3</a>
+                <ul>
+                    <li><a href="#">sub_menu3-1</a></li>
+                    <li><a href="#">sub_menu3-2</a></li>
+                    <li><a href="#">sub_menu3-3</a></li>
+                    <li><a href="#">sub_menu3-4</a></li>
+                </ul>
+            </li>
+            <li><a href="#">main_menu4</a>
+                <ul>
+                    <li><a href="#">sub_menu4-1</a></li>
+                    <li><a href="#">sub_menu4-2</a></li>
+                    <li><a href="#">sub_menu4-3</a></li>
+                    <li><a href="#">sub_menu4-4</a></li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+</body>
+</html>

@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.bigbox{
+    width: 500px;
+    height: 500px;
+    position: relative;
+    border:  1px solid #333;
+    margin: 100px auto 0;
+}
+.ear{
+    width: 150px;
+    height: 150px;
+    border: 10px solid #333;
+    background-color: #ffaf00;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+}
+.ear.left{
+    left: 40px;
+}
+.ear.right{
+    right: 40px;
+}
+
+.face{
+    position: absolute;
+    width: 500px;
+    height: 450px;
+    border: 10px solid #333;
+    /* background-color: #d59729; */
+    background-color: #ffaf00;
+    border-radius: 50%;
+    box-sizing: border-box;
+    top: 40px
+}
+
+.eyebrow.left{
+    width: 100px;
+    height: 20px;
+    background-color: #333;
+    border: 1px solid #333;
+    border-radius: 10px;
+    position: absolute;
+    left: 100px;
+    top: 120px;
+}
+.eyebrow.right{
+    width: 100px;
+    height: 20px;
+    background-color: #333;
+    border: 1px solid #333;
+    border-radius: 10px;
+    position: absolute;
+    right: 100px;
+    top: 120px;
+}
+
+.eyeball.left{
+    width: 30px;
+    height: 30px;
+    background-color: #333;
+    border: 1px solid #333;
+    border-radius: 50%;
+    position: absolute;
+    left: 130px;
+    top: 170px;
+}
+.eyeball.right{
+    width: 30px;
+    height: 30px;
+    background-color: #333;
+    border: 1px solid #333;
+    border-radius: 50%;
+    position: absolute;
+    right: 130px;
+    top: 170px;
+}
+
+.nose{
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    border: 1px solid #333;
+    border-radius: 50%;
+    position: absolute;
+    top: 230px;
+    left: 50%;
+    margin-left: -20px;
+    z-index: 1;
+}
+
+.mouth{
+    width: 80px;
+    height: 75px;
+    border: 10px solid #333;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    top: 240px;
+}
+.mouth.left{
+    left: 175px;
+}
+.mouth.right{
+    right: 175px;
+}
+
+.mouth_cover{
+    position: absolute;
+    width: 37px;
+    height: 40px;
+    background-color: #fff;
+    top: 2px;
+    transform: rotate(45deg);
+}
+.mouth_cover.left{
+    left: 42px;
+}
+.mouth_cover.right{
+    right: 42px;
+}

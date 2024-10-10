@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position-static</title>
+    <style>
+        .box{
+            height: 200px;
+            width: 200px;
+        }
+        .box1{
+            background-color: aqua;
+        }
+        .box2{
+            background-color:coral;
+        }
+        .box3{
+            background-color:cornflowerblue;
+            position: relative;
+            top: 50px;
+            left: 50px;
+            z-index: 1;
+        }
+        .box4{
+            background-color:forestgreen;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1">
+        박스1
+    </div>
+    <div class="box box2">
+        박스2
+    </div>
+    <div class="box box3">
+        박스3
+    </div>
+    <div class="box box4">
+        박스4
+    </div>
+</body>
+</html>

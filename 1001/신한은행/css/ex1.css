@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Noto Sans KR", sans-serif;
+}
+ul, li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+.cf::after{
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+.article1{
+    width: 900px;
+    height: 60px;
+    padding: 30px 0;
+    border: 1px solid #333;
+    margin: 100px auto;
+    background: #6a6a6a;
+}
+
+.article1 .icon1 li{
+    float: left;
+    width: 27px;
+    height: 27px;
+    margin-right: 20px;
+    /* background: #6a6a6a; */
+}
+
+.article1 .icon1 li:nth-child(1){
+    background: url(../images/img_intro.png) no-repeat -402px -97px;
+    background-color: #6a6a6a;
+}
+.article1 .icon1 li:nth-child(2){
+    background: url(../images/img_intro.png) no-repeat -438px -97px;
+    background-color: #6a6a6a;
+}
+.article1 .icon1 li:nth-child(3){
+    background: url(../images/img_intro.png) no-repeat -474px -97px;
+    background-color: #6a6a6a;
+}
+.article1 .icon1 li:nth-child(4){
+    background: url(../images/img_intro.png) no-repeat -510px -97px;
+    background-color: #6a6a6a;
+}
+
+.article1 .icon2 li:nth-child(1){
+    float: left;
+    width: 24px;
+    height: 25px;
+    margin-right: 20px;
+    background: #6a6a6a;
+
+    background: url(../images/img_intro.png) no-repeat -330px -346px;
+}
+.article1 .icon2 li:nth-child(2){
+    float: left;
+    width: 25px;
+    height: 17px;
+    margin-right: 20px;
+    background: #6a6a6a;
+
+    background: url(../images/img_intro.png) no-repeat -90px -350px;
+}
+.article1 .icon2 li:nth-child(3){
+    float: left;
+    width: 25px;
+    height: 17px;
+    margin-right: 20px;
+    background: #6a6a6a;
+
+    background: url(../images/img_intro.png) no-repeat -130px -350px;
+}
+.article1 .icon2 li:nth-child(4){
+    float: left;
+    width: 25px;
+    height: 17px;
+    margin-right: 20px;
+    background: #6a6a6a;
+
+    background: url(../images/img_intro.png) no-repeat -370px -350px;
+}

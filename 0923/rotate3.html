@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .bigbox{
+            margin: 0 auto;
+            width: 1050px;
+            height: 500px;
+            border: 1px solid #333;
+        }
+        .bigbox h2{
+            text-align: center;
+            padding: 70px;
+        }
+        .box{
+            width: 200px;
+            height: 150px;
+            border: 1px solid #333;
+            float: left;
+            margin-left: 50px;
+        }
+        .box img{
+            transition: all 0.3s;
+        }
+        .box1:hover img{
+            transform: rotate(360deg);
+        }
+        .box2:hover img{
+            transform-origin: left top;
+            transform: rotate(360deg);
+        }
+        .box3:hover img{
+            /* transform-origin: left top; */
+            transform: rotateY(360deg);
+        }
+        .box4:hover img{
+            /* transform-origin: left top; */
+            transform: rotateX(360deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="bigbox">
+        <h2>강아지 사진</h2>
+        <div class="box box1">
+            <img src="./img/d1.jpg" alt="dog1">
+        </div>
+        <div class="box box2">
+            <img src="./img/d2.jpg" alt="dog2">
+        </div>
+        <div class="box box3">
+            <img src="./img/d3.jpg"s alt="dog3">
+        </div>
+        <div class="box box4">
+            <img src="./img/d4.jpg"s alt="dog4">
+        </div>
+    </div>
+</body>
+</html>
