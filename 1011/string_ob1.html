@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var t = "Hello Thank you good luck to you";
+
+        document.write(t.charAt(16), "<br>");
+        // 인덱스 번호 16번 문자 출력.
+
+        document.write(t.indexOf("you"), "<br>");
+        document.write(t.indexOf("you", 16), "<br>");
+
+        document.write(t.lastIndexOf("you"), "<br>");
+        document.write(t.lastIndexOf("you", 25), "<br>");
+
+        document.write(t.match("luck"), "<br>");
+
+        document.write(t.search("you"), "<br>");
+
+        document.write(t.substr(21,4), "<br>");
+        // 인덱스 번호 21부터 4개의 문자 추출하기
+        document.write(t.substring(6,12), "<br>");
+        // 인덱스 번호 6 부터 12까지 문자 추출하기
+
+        document.write(t.replace("you","me"), "<br>");
+        // 문자열 왼쪽부터 제일 먼저 발견된 you를 me로 대체하기
+
+        document.write(t.toLowerCase(), "<br>");
+
+        document.write(t.toUpperCase(), "<br>");
+
+        document.write(t.length, "<br>");
+        // 문자열의 총 개수를 반환. 공백 포함.
+
+        var s = t.split("");
+
+        document.write(s[0], "<br>");
+        document.write(s[4], "<br>");
+
+        var str = "A";
+        var t = str.charCodeAt(0);
+
+        document.write(t, "<br>");
+        // A의 아스키코드 값 출력
+        document.write(String.fromCharCode(65), "<br>");
+        //아스키코드 값 65를 해당하는 문자로 반환
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

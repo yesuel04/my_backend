@@ -113,6 +113,9 @@ a{
     box-sizing: border-box;
     border-right: 1px solid #e5e5e5;
 }
+.list .contents > ul > li:last-child{
+    border-right: none;
+}
 
 .list .contents > ul > li > a > .img{
     overflow: hidden;
@@ -120,14 +123,13 @@ a{
     width: 100%;
     border-radius: 20px;
 }
-.list .contents > ul > li > a > .img img{
-    /* top: 50%;
-    left: 50%; */
+.list .contents > ul > li > a > .img > img{
     width: 100%;
     height: 100%;
-    /* object-fit: cover; */
-    /* transform: translate(-50%, -50%);
-    transition: all 0.2s ease-out; */
+    transition: all 0.2s ease-out;
+}
+.list .contents > ul > li > a > .img > img:hover{
+    transform: scale(1.1);
 }
 
 .list .contents > ul > li > a > .text{
@@ -184,4 +186,20 @@ a{
     font-size: 1rem;
     border-radius: 21px;
     background-color: #f3f3f3;
+}
+.list .contents ul li ul.type02 li span:nth-child(1) {
+    position: relative;
+    margin-right: 0.625rem;
+    padding-right: 0.625rem;
+    font-weight: bold;
+}
+
+.list .contents ul li ul.type02 li span:nth-child(1)::after{
+    content: " ";
+    position: absolute;
+    width: 1px;
+    height: 0.625rem;
+    margin-top: 5px;
+    margin-left: 10px;
+    background-color: #b8b8b8;
 }
