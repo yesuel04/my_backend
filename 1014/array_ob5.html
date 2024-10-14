@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        // 학생 세명의 국영수 평균 점수
+        var scores = [
+            [90,80,70], //학생1
+            [85,95,88], //학생2
+            [78,92,85]  //학생3
+        ];
+
+        var ksum = 0; //국어 합계
+        var esum = 0; //영어 합계
+        var msum = 0; //수학 합계
+
+        //합계 계산
+        for(var i=0; i<scores.length; i++){
+            ksum = ksum + scores[i][0];
+            esum = esum + scores[i][1];
+            msum = msum + scores[i][2];
+        }
+
+        var kavg = ksum / scores.length;
+        var eavg = esum / scores.length; 
+        var mavg = msum / scores.length;
+        console.log(kavg);
+
+        document.write("국어 평균은 " + kavg + "점", "<br>");
+        document.write("영어 평균은 " + eavg + "점", "<br>");
+        document.write("수학 평균은 " + mavg + "점", "<br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
