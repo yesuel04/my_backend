@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var userName = prompt("이름을 입력하세요 : ", "김영희");
+        document.write("안녕하세요 "+userName+" 님!","<br>");
+        document.write(`안녕하세요 ${userName}님!` ,"<br>");
+
+        var numbers = [1,2,3,4,5];
+        document.write(numbers,"<br>");
+        document.write(numbers[0],"<br>");
+
+        // for(var i=0; i<5; i++){
+        //     document.write(numbers[i],"<br>");
+        // }
+        for(var i=0; i<numbers.length; i++){
+            document.write(numbers[i],"<br>");
+        }
+
+
+        //객체 생성하기
+        let person = {
+            name : "김영희",
+            age : 30,
+            phone : "010-1111-4444"
+        }
+        document.write(person.name,"<br>");
+        document.write(person.age,"<br>");
+        document.write(person.phone,"<br>");
+
+        let personJson = JSON.stringify(person);
+        // json 형식의 파일로 객체 리터럴로 변환하는 명령어.
+        console.log(personJson);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
