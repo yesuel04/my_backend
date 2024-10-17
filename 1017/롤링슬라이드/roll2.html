@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{
+            list-style: none; 
+            display: flex;
+            margin-top: 100px;
+        }
+        li{width: 1200px;}
+        .wrap{
+            width: 1200px;
+            margin: 0 auto;
+        }
+        .banner{
+            width: 1200px;
+            border: 1px solid red;
+            height: 300px;
+            transition: all 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="big_banner">
+            <ul class="banner">
+                <li><img src="./images/slide1.jpg"></li>
+                <li><img src="./images/slide2.jpg"></li>
+                <li><img src="./images/slide3.jpg"></li>
+                <li><img src="./images/slide1.jpg"></li>
+            </ul>
+            <!-- 1200*300 -->
+        </div>
+    </div>
+
+    <script>
+        var list = document.querySelector('.banner');
+        var listLi = document.querySelectorAll('.banner li');
+        var show_num = 3;
+        var total = listLi.length;
+        var li_width = document.querySelector('.banner > li').offsetWidth;
+
+        var num = 0;
+
+        function autoplay(){
+            if(num==2){
+                num = 0;
+                list.style.transition = 'none';
+                list.style.marginLeft = 0;
+            }
+            setTimeout(function(){
+                num++;
+                list.style.transition = 'margin-left 0.5s';
+                list.style.marginLeft = -1200 * num + "px";
+            },50);
+        }
+        setInterval(autoplay, 3000);
+
+    </script>
+</body>
+</html>

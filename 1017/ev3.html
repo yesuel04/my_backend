@@ -22,13 +22,17 @@
             margin-bottom: 20px;
             transition: all 0.5s;
         }
+        .rect.active{
+            background-color: green;
+            border-radius: 50%;
+        }
     </style>
 </head>
 <body>
     <div id="container">
         <p>도형 위에 마우스 포인터를 올려 놓으세요.</p>
         <ul>
-            <li class="rect"></li>
+            <li class="rect active"></li>
             <li class="rect"></li>
             <li class="rect"></li>
             <li class="rect"></li>
@@ -39,15 +43,24 @@
     <script>
         var rects = document.querySelectorAll('.rect');
 
+        // rects.forEach(function(rect){
+        //     rect.addEventListener('mouseover', function(){
+        //         rect.style.backgroundColor = 'green';
+        //         rect.style.borderRadius = "50%";
+        //     });
+            
+        //     rect.addEventListener('mouseout', function(){
+        //         rect.style.backgroundColor = '';
+        //         rect.style.borderRadius = "";
+        //     });
+        // });
+
         rects.forEach(function(rect){
             rect.addEventListener('mouseover', function(){
-                rect.style.backgroundColor = 'green';
-                rect.style.borderRadius = "50%";
-            });
-            
-            rect.addEventListener('mouseout', function(){
-                rect.style.backgroundColor = '';
-                rect.style.borderRadius = "";
+                rects.forEach(function(rect){
+                    rect.classList.remove('active');
+                });
+                this.classList.add('active');
             });
         });
 
