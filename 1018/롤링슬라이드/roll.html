@@ -44,6 +44,9 @@
                 <li><a href="#"><img src="./images/pic_t3.jpg"></a></li>
                 <li><a href="#"><img src="./images/pic_t4.jpg"></a></li>
                 <li><a href="#"><img src="./images/pic_t5.jpg"></a></li>
+                <li><a href="#"><img src="./images/pic_t1.jpg"></a></li>
+                <li><a href="#"><img src="./images/pic_t2.jpg"></a></li>
+                <li><a href="#"><img src="./images/pic_t3.jpg"></a></li>
             </ul>
         </div>
         <p>
@@ -66,13 +69,6 @@
         var show_num = 3;
         var total = listLi.length;
         var li_width = document.querySelector('#banner > li').offsetWidth;
-
-        for(var i=0; i<3; i++){
-            var copyobj = listLi[i].cloneNode(true);
-            list.append(copyobj);
-        }
-        // #banner li - 0번째 인덱스 번호에 해당하는 li 선택 복제 후 copyobj 저장.
-        // #banner 맨 뒤에 copyobj를 추가.
 
         var num = 0;
 

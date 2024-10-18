@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+
+    <img id="myImage1" src="./images/coffee-pink.jpg" alt="Sample Image"> 
+    <script> 
+        const img1 = document.getElementById("myImage1"); 
+        const srcValue = img1.getAttribute("src"); 
+        console.log(srcValue); // "image.jpg" 출력 
+    </script>
+
+<!-- ----------------------분리선----------------------------- -->
+
+    <img id="myImage2" src="./images/coffee-gray.jpg" alt="Sample Image"> 
+    <script> 
+        const img2 = document.getElementById("myImage2"); 
+        img2.setAttribute("src", "./images/coffee-blue.jpg"); 
+        console.log(img2.src); // "newImage.jpg" 출력 
+    </script>
+
+</body>
+</html>

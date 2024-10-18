@@ -1,0 +1,36 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>DOM Node Example</title> 
+</head> 
+<body> 
+    <div id="container"> 
+        <p id="text">Hello, World!</p> 
+    </div> 
+ 
+    <button id="addButton">Add New Paragraph</button> 
+ 
+    <script> 
+        // 버튼 클릭 시 새로운 p 태그 추가하기 
+        document.getElementById('addButton').addEventListener('click', function() { 
+            // DOM 노드 생성 (새로운 p 요소) 
+            var newParagraph = document.createElement('p'); 
+            // 텍스트 노드 생성 
+            var textNode = document.createTextNode('This is a new paragraph.'); 
+ 
+            // 텍스트 노드를 p 요소 안에 추가 
+            newParagraph.appendChild(textNode); 
+ 
+            // 새로운 p 요소를 div#container에 추가 
+            document.getElementById('container').appendChild(newParagraph); 
+        }); 
+ 
+        // 이미 존재하는 노드에 접근하기 
+        var textElement = document.getElementById('text'); 
+        console.log(textElement.nodeName);  // "P" 
+        console.log(textElement.nodeType);  // 1 (Element 노드) 
+    </script> 
+</body> 
+</html>

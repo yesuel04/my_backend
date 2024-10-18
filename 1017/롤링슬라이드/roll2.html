@@ -18,7 +18,6 @@
         }
         .banner{
             width: 1200px;
-            border: 1px solid red;
             height: 300px;
             transition: all 0.5s;
         }
@@ -32,6 +31,7 @@
                 <li><img src="./images/slide2.jpg"></li>
                 <li><img src="./images/slide3.jpg"></li>
                 <li><img src="./images/slide1.jpg"></li>
+                <li><img src="./images/slide2.jpg"></li>
             </ul>
             <!-- 1200*300 -->
         </div>
@@ -47,7 +47,7 @@
         var num = 0;
 
         function autoplay(){
-            if(num==2){
+            if(num==3){
                 num = 0;
                 list.style.transition = 'none';
                 list.style.marginLeft = 0;
