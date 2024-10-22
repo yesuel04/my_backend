@@ -1,0 +1,101 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+ul,li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+.clearfix::before, .clearfix::after {
+	content: "";
+	display: block;
+}
+.clearfix::after {
+	clear: both;
+}
+
+
+/* 햄버거 바 */
+header{
+    width: 100%;
+    height: 70px;
+    position: relative;
+}
+header h1{
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    margin: 0;
+}
+header h1 img{
+    width: 100px;
+    padding-top: 7px;
+}
+header p.ham{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: -7px;
+    right: 15px;
+    text-indent: -9999px;
+    background: url(../images/gnb_btn.png) no-repeat 50% 50%;
+    background-size: 30px 40px;
+    cursor: pointer;
+}
+
+
+/* 네비 */
+.nav{
+    width: 220px;
+    height: 100%;
+    background-color: #fff;
+    padding: 40px 24px 40px 0;
+    position: absolute;
+    top: 0;
+    right: -244px;
+    transition: all 0.2s;
+}
+.nav.active{
+    right: 0;
+}
+.nav ul li{
+    background-color: #ccc;
+}
+.nav > ul > li > a{
+    width: 172px;
+    height: 50px;
+    background-color: #fff;
+    border-bottom: 1px dotted #bbb;
+    /* padding-left: 5px; */
+    text-indent: 5px;
+}
+.nav ul li a{
+    display: block;
+    width: 100%;
+    line-height: 40px;
+    height: 40px;
+    color: #222;
+}
+.nav ul li .sub{
+    height: 0;
+    overflow: hidden;
+    transition: all 0.4s;
+    padding-left: 0;
+}
+.nav ul li .sub li a{
+    height: 36px;
+    border-bottom: 1px dotted #eee;
+    text-indent: 5px;
+}
+.nav ul li .sub li a:hover{
+    background-color: #fff;
+}
+
+
+
+.hero img{
+    width: 100%;
+    height: auto;
+}

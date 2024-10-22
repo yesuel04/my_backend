@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul, li{
+            list-style: none;
+        }
+        a{
+            color: #333;
+        }
+
+        .content{
+            width: 500px;
+            height: 200px;
+            border: 1px solid red;
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+        ul{
+            display: flex;
+            justify-content: space-between;
+            padding: 50px;
+        }
+        li a{
+            width: 50px;
+        }
+    </style>
+    <script>
+
+        // $(function(){
+        //     $('.no1 a').text('내용변경1');
+        // });
+
+        $(function(){
+
+        var changeTxt = document.querySelectorAll('.content ul li a');
+
+        changeTxt.forEach(function(txt){
+
+            txt.addEventListener('mouseover', function(){
+                $('.no1 a').text('내용변경1');
+            });
+            txt.addEventListener('mouseout', function(){
+                $('.no1 a').text('텍스트1');
+            });
+        });
+
+        });
+        
+    </script>
+</head>
+<body>
+    <div class="content">
+        <ul>
+            <li class="no1"><a href="#">텍스트1</a></li>
+            <li class="no2"><a href="#">텍스트2</a></li>
+            <li class="no3"><a href="#">텍스트3</a></li>
+            <li class="no4"><a href="#">텍스트4</a></li>
+        </ul>
+    </div>
+</body>
+</html>
