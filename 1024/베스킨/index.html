@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #252422;
+        }
+        ul, li{
+            list-style: none;
+        }
+/* 439*254 */
+/* 25*160 */
+/* 기본 파랑. 올리면 핑크. 선택된 건 주황. */
+
+        .wrap{
+            width: 514px;
+            height: 160px;
+            margin: 0 auto;
+            padding-top: 100px;
+        }
+        .bigBox{
+            width: 514px;
+            height: 160px;
+            /* overflow: hidden; */
+        }
+        /* .bigBox ul{
+            display: flex;
+        }
+        .bigBox ul li{
+            display: flex;
+        } */
+
+        /* .bigBox ul li{
+            float: left;
+        } */
+        /*목차 사진*/
+        .bigBox ul li .title{
+            /* display: block; */
+            width: 25px;
+            height: 160px;
+            background: url(./blue01.png) no-repeat 0 0;
+            text-indent: -9999px;
+            float: left;
+        }
+        .bigBox ul li .title.hover{
+            background: url(./pink01.png) no-repeat 0 0;
+        }
+        .bigBox ul li .title.select{
+            background: url(./orange01.png) no-repeat 0 0;
+        }
+
+        /*안쪽 사진*/
+        .bigBox ul li .content{
+            width: 439px;
+            height: 160px;
+            text-indent: -9999px;
+            float: left;
+            transition: width 0.3s;
+        }
+
+        .bigBox ul li .content1{
+            background: url(./menuimg01.jpg) no-repeat 0 0;
+            /* background-size: 100% 100%; */
+            background-size: 439px 160px;
+        }
+        .bigBox ul li .content2{
+            background: url(./menuimg02.jpg) no-repeat 0 0;
+            /* background-size: 100% 100%; */
+            background-size: 439px 160px;
+        }
+        .bigBox ul li .content3{
+            background: url(./menuimg03.jpg) no-repeat 0 0;
+            /* background-size: 100% 100%; */
+            background-size: 439px 160px;
+        }
+
+
+        .bigBox ul li .content{
+            width: 0px;
+        }
+        .bigBox ul li .content1{
+            width: 439px;
+        }
+        
+    </style>
+
+    <script>
+        $(function(){
+
+            // $('.content').hide();
+            // $('.content:eq(0)').show();
+            $('.title1').addClass('select');
+
+            $('.bigBox ul li .title').click(function(){
+
+                var aaa = $(this).next('.content').css('width');
+                
+                if(aaa = '0px'){
+                    $('.content').css('width', '0px');
+                    $(this).next('.content').css('width', '439px');
+
+                    $('.title').removeClass('select');
+                    $(this).addClass('select');
+                }
+                
+            });
+
+            $('.title').hover(function(){
+                $(this).addClass('hover');
+            }, function(){
+                $(this).removeClass('hover');
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <div class="bigBox">
+            <ul>
+                <li>
+                    <div class="title title1">title</div>
+                    <div class="content content1">img</div>
+                </li>
+                <li>
+                    <div class="title title2">title</div>
+                    <div class="content content2">img</div>
+                </li>
+                <li>
+                    <div class="title title3">title</div>
+                    <div class="content content3">img</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
