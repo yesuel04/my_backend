@@ -71,9 +71,10 @@
             var num = 0;
             var width = 1200;
             var copy = $('.banner li:lt(1)').clone();
-
+            //복사하기
             $('.banner').append(copy);
 
+            //다음으로 가기 버튼
             $('.next').click(function(){
                 if(num==3){
                     num = 0;
@@ -83,6 +84,7 @@
                 $('.banner').stop().animate({'margin-left':-width*num}, 300);
             });
 
+            //이전으로 가기 버튼
             $('.prev').click(function(){
                 if(num==0){
                     num = 3;
@@ -92,6 +94,7 @@
                 $('.banner').stop().animate({'margin-left':-width*num}, 300);
             });
 
+            //자동 슬라이드
             setInterval(autoplay,5000);
 
             function autoplay(){

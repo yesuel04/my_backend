@@ -39,22 +39,21 @@
     <script>
         $(function(){
             $('.tab li').click(function(){
-                var i = $(this).index();
-                // alert(i);
-                $('.tab li').removeClass('on');
-                $('.tab li').eq(i).addClass('on');
-                $('.tab_list div').removeClass('on');
-                $('.tab_list div').eq(i).addClass('on');
+                var a = $(this).index();
 
+                $('.tab li').removeClass('on');
+                $('.tab li').eq(a).addClass('on');
+                $('.tab_list div').removeClass('on');
+                $('.tab_list div').eq(a).addClass('on');
             });
         });
     </script>
 </head>
 <body>
     <ul class="tab">
-        <li class="on">1번 항목</li>
-        <li>2번 항목</li>
-        <li>3번 항목</li>
+        <li class="on">1번</li>
+        <li>2번</li>
+        <li>3번</li>
     </ul>
     <div class="tab_list">
         <div class="on">1번 항목 내용 입력.</div>
