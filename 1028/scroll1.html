@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        *{margin: 0; padding: 0;} 
+        .box{
+            width: 150px;
+            height: 150px;
+        }
+        .box1{background-color: cornsilk; position: absolute; top: 300px;}
+        .box2{background-color: coral; position: absolute; top: 500px; left: 50px;}
+        .box3{background-color: cornflowerblue; position: absolute; top: 700px; left: 200px;}
+        .box4{background-color: crimson; position: absolute; top: 1000px; left: 100px;}
+    </style>
+    <script>
+        $(function(){
+            var abox = $('.box1').offset().top;
+            var bbox = $('.box2').offset().top;
+            var cbox = $('.box3').offset().left;
+            // top과 left의 값을 가져온다. 단위는 빼고 숫자만 가져옴.
+
+            var dbox = $('.box4').css('top', '2300px');
+            // top에 2300px이라는 값을 넣는다
+            var ebox = $('.box4').css('top');
+            // top의 값을 가져온다. 단위까지 합쳐서 가져옴.
+
+            var fbox = parseInt($('.box4').css('top'));
+            alert(fbox);
+        });
+    </script>
+</head>
+<body>
+    <div class="box box1">박스1</div>
+    <div class="box box2">박스2</div>
+    <div class="box box3">박스3</div>
+    <div class="box box4">박스4</div>
+</body>
+</html>
