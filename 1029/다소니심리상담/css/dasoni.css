@@ -4,7 +4,6 @@
 }
 body{
     font-family: 'NanumSquare';
-    background-color: #eee;
 }
 ul, li{
     list-style: none;
@@ -19,6 +18,7 @@ a{
 .hd_content{
     width: 100%;
     margin: 0 auto;
+    position: relative;
 }
 /* 헤더 로고 */
 .hd_content .header_line{
@@ -52,6 +52,7 @@ a{
 }
 .hd_content .nav > ul > li{
     width: 20%;
+    z-index: 100;
 }
 .hd_content .nav > ul > li > a{
     display: block;
@@ -72,21 +73,23 @@ a{
     /* height: 0; */
 }
 .hd_content .nav ul li ul li{
+	width: 200px;
+	text-align: center;
+}
+.hd_content .nav ul li ul li a{
+    display: inline-block;
     font-size: 1.000em;
     padding: 14px 10px;
     line-height: 1.2em;
     color: #333;
-    text-align: center;
     font-weight: 500;
     letter-spacing: -0.025em;
 }
-.hd_content .nav ul li ul li a{
-    width: 100%;
-    
-}
 .hd_content .nav ul li ul li a:hover{
     font-weight: bold;
-    background: url(../img/menu_hover.png) no-repeat center left;
+}
+.hd_content .nav ul li ul li:hover a{
+    background: url(../img/menu_hover.png) no-repeat 0 0;
 }
 
 .hd_content .nav_bg{
@@ -98,7 +101,7 @@ a{
     top: 161px;
     background: #fff;
     transition: all 0.4s;
-    z-index: -999;
+    z-index: 50;
     border-top: 1px solid #e0e0e0;
 }
 .hd_content .nav_bg.open{
@@ -108,8 +111,10 @@ a{
     border-top: 0;
 }
 
-
-.hd_content .nav_bg::after{
-    /* display: block;
-    content: " "; */
+.slide_content{
+    /* position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%; */
 }
