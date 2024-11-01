@@ -1,0 +1,67 @@
+@import url(https://db.onlinewebfonts.com/c/67f9be25cebb2b86b67d7e4f824751fd?family=OneShinhan+Bold);
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+*{margin: 0;
+padding: 0;}
+#mainVisual{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+#mainVisual .visual-item{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+#mainVisual .visual-item > img{
+    width: 100%;
+    height: 100vh;
+    transform: scale(1.2,1.2);
+    transition: transform 5s ease-in-out;
+}
+#mainVisual .visual-txt{
+    font-family: 'Pretendard-Regular';
+    position: absolute;
+    top: 30%;
+    left: 10%;
+}
+#mainVisual .visual-inner-txt{
+    padding-left: 22px;
+    color: #fff;
+    padding-bottom: 30px;
+}
+#mainVisual .visual-inner-txt h2{
+    font-family: "OneShinhan Bold";
+    font-size: 64px;
+    line-height: 80px;
+    letter-spacing: -.32px;
+}
+#mainVisual .visual-inner-txt h2 span{
+    color: #5EE1FF;
+}
+#mainVisual .visual-inner-txt strong{
+    display: block;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -.12px;
+    font-weight: 500;
+    margin-top: 40px;
+}
+#mainVisual .visual-item.active > img{
+    transform: scale(1,1);
+}
+#mainVisual .slick-arrow.slick-prev{
+    background: url(../img/slick/main_visual_prev_btn.png) no-repeat;
+}
+#mainVisual .slick-arrow.slick-next{
+    margin-left: 70px;
+    background: url(../img/slick/main_visual_next_btn.png) no-repeat;
+}
+#mainVisual .slick-prev::before,
+#mainVisual .slick-next::before{
+    opacity: 0;
+}
