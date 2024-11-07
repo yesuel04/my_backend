@@ -107,9 +107,9 @@ nav ul{width:720px; position: relative;z-index: 999999;}
 #movieChartBeScreen_wrap{
     width: 100%;
     height: 461px;
-    background: #eee;
+    background: #ddd;
 }
-#movieChartBeScreen_wrap .container{position: relative;  padding: 50px 0px 60px; overflow: hidden;}
+#movieChartBeScreen_wrap .container{position: relative;  padding: 50px 0px 60px;}
 .tabBtn_wrap{overflow: hidden;}
 .tabBtn_wrap h3{float: left; margin-right: 40px;}
 .tabBtn_wrap h3:last-child{margin-right: 0;}
@@ -135,11 +135,52 @@ nav ul{width:720px; position: relative;z-index: 999999;}
     font-size: 14px; 
     background: url(../img/arrowR_8x13.png) no-repeat 75px center/10px;
 }
-.movieChart_list{margin-top: 20px;}
-.movieChart_list .listWrap{
-    width: 5000px;
-    display: flex;
+.movieChart_list{margin-top: 20px;width:100%;
+    overflow: hidden;
+    position: relative;
 }
+.movieChart_list .prev{
+    position: absolute;
+    top:35%;
+    left:-20px;
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.3);
+    z-index: 9999999;
+}
+.movieChart_list .prev:after{
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    width:40px;
+    height:40px;
+    background: url(../img/arrowL.png) no-repeat 9px 7px;
+}
+.movieChart_list .next{
+    position: absolute;
+    top:35%;
+    right:-20px;
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.3);
+    z-index: 9999999;
+}
+.movieChart_list .next:after{
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    width:40px;
+    height:40px;
+    background: url(../img/arrowR.png) no-repeat 9px 7px;
+}
+
+
+
+.movieChart_list .listWrap{width:5000px}
 .movieChart_list .listWrap .slideBox{
     width: 170px;
     float: left;
@@ -157,7 +198,7 @@ nav ul{width:720px; position: relative;z-index: 999999;}
     font-size: 26px;
     z-index: 999;
 }
-.movieChart_list .listWrap .slideBox:last-child{margin-right: 0;}
+/* .movieChart_list .listWrap .slideBox:last-child{margin-right: 0;} */
 .movieChart_list .listWrap .slideBox .imgWrap{position: relative; height: 242.52px;  }
 
 .movieChart_list .listWrap .slideBox .imgWrap img{width: 100%}
@@ -185,7 +226,7 @@ nav ul{width:720px; position: relative;z-index: 999999;}
     margin-bottom: 5px;
     border-radius: 5px;
     text-decoration: none;
-    color: #666;
+    color: #ccc;
     font-weight: bold;
     font-size: 12px;
 }
@@ -199,35 +240,63 @@ nav ul{width:720px; position: relative;z-index: 999999;}
 .slideBox .imgWrap .movieChart_btn_wrap a:last-child:hover{
     background: rgba(255,0,0,.6);
 }
-
 .movieChart_list .listWrap .slideBox .movie_info_wrap{text-align: center;}
 .movieChart_list .listWrap .slideBox .movie_info_wrap .movieName{display: block; text-align: center; margin: 10px 0; font-weight: bold;}
 .movieChart_list .listWrap .slideBox .movie_info_wrap span{font-size: 12px;}
 .movieChart_list .listWrap .slideBox .movie_info_wrap span img{width:16px; height: 16px; position: relative; top: 3px }
 
 
-/* 버튼 */
-.slide_Btn{
-    width: 1020px;
-    height: auto;
-    margin: 0 auto;
-    position: absolute;
-    top: 440px;
-    left: 23.5%;
+#event_wrap{
+    width: 100%;
+    height: 400px;
+    background: #fff;  
 }
-.slide_Btn .slideBtn{
-    display: flex;
-    justify-content: space-between;
-    align-items:center;
+.event_title_wrap{padding-top: 60px;}
+.event_title_wrap h3{
+    float: left; 
+    font-size: 24px; 
+    font-weight: bold; 
+    margin-bottom: 20px;
 }
-.slide_Btn .slideBtn div{
-    width: 40px;
-    height: 40px;
+.event_title_wrap .btn_allView{
+    float: right;
+    border: 1px solid #ccc;
+    padding: 7px 30px 7px 10px;
+    display: block;
     border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
-    cursor: pointer;
+    text-decoration: none;
+    color: #222;
+    font-size: 14px;
+    background: url(../img/arrowR_8x13.png) no-repeat 75px center/10px;
 }
-.slide_Btn .slideBtn div > img {
-    width: 10px;
-    padding: 12px 15px 0 15px;
+.event_title_wrap .btn_eventCntrol{
+    float: right;
+    background: url(../img/stop.png) no-repeat center center/9px 13px;
+    width: 28px;
+    height: 28px;
+    font-size: 0;
+    border: 1px solid #e3e3e3;
+    border-radius: 50%;
+    margin-right: 10px;
 }
+.event_list_wrap{
+    width: 980px; margin-top: 30px;
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+  }

@@ -1,26 +1,21 @@
-var show_num = 3;
+var show_num = 5;
 var total = $('.slideBox').length;
 var li_w = $('.slideBox').eq(0).width();
-alert(total);
+// var li_w = $('.movieChart').width();
+// alert(li_w);
 
 var num = 0;
 
 $('.rightbtn').click(function(){
-    if(num==total){
-        num = 0;
-        $('.listWrap').css('margin-left', '0');
-    }
+    if(num==4)return;
     num++;
-    $('.listWrap').stop().animate({marginLeft: -li_w * num},500);
+    $('.listWrap').stop().animate({marginLeft: -(li_w + 32) * 4 * num},500);
     return false;
 });
 
 $('.leftbtn').click(function(){
-    if(num==0){
-        num = 5;
-        $('.listWrap').css('margin-left', -li_w * num);
-    }
+    if(num==1)return;
     num--;
-    $('.listWrap').stop().animate({marginLeft: -li_w * num},500);
+    $('.listWrap').stop().animate({marginLeft: -(li_w + 32) * 4 * num},500);
     return false;
 });
