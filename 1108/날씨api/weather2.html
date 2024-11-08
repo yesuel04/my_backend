@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            // $("button").click(function(){
+            // $.getJSON("demo_ajax_json.js", function(result){
+            //     $.each(result, function(i, field){
+            //     $("div").append(field + " ");
+            //     });
+            // });
+            // });
+
+            $.getJSON("http://api.openweathermap.org/data/2.5/weather?id=1835553&appid=ae2ef5de65e25388a36b43c17b0a6711&units=metric", function(data){
+                // alert(data.code);
+                // alert(data.city.name);
+                var $ctemp = data.main.temp;
+                var $clowtemp = data.main.temp_min;
+                var $chightemp = data.main.temp_max;
+                var $cName = data.name;
+                var $cicon = data.weather[0].icon;
+                console.log($ctemp);
+                console.log($clowtemp);
+                console.log($chightemp);
+                console.log($cName);
+                console.log($cicon);
+
+                $('.ctemp').append($ctemp);
+                $('.clowtemp').append($clowtemp);
+                $('.chightemp').append($chightemp);
+                $('h2').prepend($cName);
+                // $('.cicon').append($cicon);
+                // $('.cicon').append('<img src="https://openweathermap.org/img/wn/'+$cicon+'@2x.png">');
+                $('.cicon').append(`<img src="https://openweathermap.org/img/wn/${$cicon}@2x.png">`);
+
+                var $cDate = new Date().toLocaleString('ko-KR', { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' });
+                $('h2').append($cDate);
+            });
+
+
+        });
+    </script>
+    <!-- ae2ef5de65e25388a36b43c17b0a6711 -->
+    <!-- 수원  1835553 -->
+    <!-- http://api.openweathermap.org/data/2.5/forecast?id=1835553&appid=ae2ef5de65e25388a36b43c17b0a6711 -->
+    <!-- http://api.openweathermap.org/data/2.5/forecast?id=1835553&appid=ae2ef5de65e25388a36b43c17b0a6711&units=metric -->
+    <!-- http://api.openweathermap.org/data/2.5/weather?id=1835553&appid=ae2ef5de65e25388a36b43c17b0a6711&units=metric -->
+    <!-- 서울  1835848 -->
+    <!-- http://api.openweathermap.org/data/2.5/forecast?id=1835848&appid=ae2ef5de65e25388a36b43c17b0a6711 -->
+</head>
+<body>
+    <h1>Weather api</h1>
+    <h2> - 날씨예보 </h2>
+    <div class="ctemp">현재온도 : </div>
+    <div class="clowtemp">최저온도 : </div>
+    <div class="chightemp">최고온도 : </div>
+    <div class="cicon">아이콘</div>
+    <!-- <img src="https://openweathermap.org/img/wn/02d@2x.png"> -->
+</body>
+</html>
