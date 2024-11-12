@@ -9,6 +9,7 @@ body{font-family: 'Noto Sans KR', sans-serif; }
     display: block;
     clear: both;
 }
+a{text-decoration: none; color: inherit;}
 /* 공통속성 */
 .container{
     width:980px; height:inherit; margin: 0 auto;
@@ -356,6 +357,7 @@ nav ul{width:720px; position: relative;z-index: 999999;}
 
 .giftcon_wrap{
     padding: 60px 0 0;
+    margin-bottom: 50px;
 }
 .giftcon_wrap .giftcon_contents{
     width: 980px;
@@ -366,6 +368,78 @@ nav ul{width:720px; position: relative;z-index: 999999;}
 .giftcon_wrap .giftcon_contents ul{
     display: flex;
 }
+.giftcon_wrap .giftcon_contents ul > li.giftconList{
+    width: 270px;
+    padding: 20px 19px 30px;
+    border: 1px solid #e4e4e4;
+    border-radius: 10px;
+}
+.giftcon_wrap .giftcon_contents ul > li.giftcon_two,
+.giftcon_wrap .giftcon_contents ul > li.giftcon_three{
+    margin-left: 25px;
+}
+.giftcon_wrap .giftcon_contents ul li ul li.giftcon_menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    font-size: 20px;
+    color: #222;
+    line-height: 1.450em;
+    margin-top: 0;
+}
+.giftcon_wrap .giftcon_contents ul li ul li.giftcon_menu a{
+    padding: 2px 15px 3px;
+    font-weight: 400;
+    font-size: 12px;
+    color: #666;
+    line-height: 1.417em;
+    border: 1px solid #f4f4f4;
+    border-radius: 11px;
+    text-decoration: none;
+}
+.giftcon_wrap .giftcon_contents ul li ul li{
+    margin-top: 20px;
+}
+.giftcon_wrap .giftcon_contents ul li ul li > a{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.giftcon_wrap .giftcon_contents ul li ul li > a .giftcon_img{
+    position: relative;
+    width: 75px;
+    height: 76px;
+    border-radius: 5px;
+}
+.giftcon_wrap .giftcon_contents ul li ul li > a .giftcon_img img{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(0, -50%);
+}
+.giftcon_wrap .giftcon_contents ul li ul li > a .giftcon_txt{
+    display: inline-flex;
+    flex-direction: column;
+    padding-left: 15px;
+}
+.giftcon_wrap .giftcon_contents ul li ul li > a .giftcon_txt p:first-child{
+    font-weight: 500;
+    font-size: 14px;
+    color: #222;
+    line-height: 1.429em;
+}
+.giftcon_wrap .giftcon_contents ul li ul li > a .giftcon_txt p:last-child{
+    font-weight: 700;
+    font-size: 16px;
+    color: #222;
+    letter-spacing: -0.020em;
+    line-height: 1.444em;
+}
+
 .giftcon_wrap .giftcon_contents ul li ul{
     display: flex;
     flex-direction: column;
