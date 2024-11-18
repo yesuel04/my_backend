@@ -1,4 +1,4 @@
-import UserCard from "./UserCard";
+import UserCard1 from "./UserCard1";
 
 function UserList(){
     const users =[
@@ -11,7 +11,7 @@ function UserList(){
         <div>
             <h1>사용자 목록</h1>
            {users.map((user, index) =>(
-            <UserCard
+            <UserCard1
                 key={index}
                 name={user.name} 
                 age={user.age}

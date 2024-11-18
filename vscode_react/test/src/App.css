@@ -1,6 +1,5 @@
-.lime-box{
-  background: lime;
-  color:'red';
-  height:64px;
-  width:64px;
+.gray-box{
+    background: gray;
+    width: 64px;
+    height: 64px;
 }
