@@ -1,15 +1,13 @@
 
 import './App.css';
-import ProductList from './ProductList';
+import InputSample1 from './InputSample1';
+
 function App(){
   
   return( 
-    <ProductList>
+    <InputSample1>
+    </InputSample1>
 
-    </ProductList>
-    // <UserList>
-
-    // </UserList>
   );
 
 }
