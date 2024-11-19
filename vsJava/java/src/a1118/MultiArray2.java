@@ -24,12 +24,16 @@ public class MultiArray2 {
         }
 
         //모든 학생의 총점과 평균
-        for(int i=0; i<scores[i].length; i++){
-            int sumAll = 0;
-            sumAll += scores[i][1];
-            System.out.printf("국 : %d", sumAll);
-
+        int totalSum = 0;
+        int totalSub = 0;
+        for(int i=0; i<scores.length; i++){
+            for(int j=0;j<scores[i].length;j++){
+                totalSum += scores[i][j];
+            }
         }
+        totalSub = (scores[0].length) * (scores.length);
+        double totalAvg = (double) totalSum/totalSub;
+        System.out.printf("학생의 전체 총점 : %d, 평균 : %.2f\n", totalSum, totalAvg);
 
     }
 }
