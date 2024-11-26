@@ -1,13 +1,12 @@
 
 import './App.css';
-import Title from './Title';
-import InputSample from './InputSample';
-import { useState } from 'react';
+import MultiInputForm from './MultiInputForm';
+
 
 function App() {
   return(
     <div>
-      <InputSample></InputSample>
+      <MultiInputForm></MultiInputForm>
     </div>
   );
 }

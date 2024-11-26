@@ -119,8 +119,7 @@ public class BankApplication {
             return;
         }
         account.setBalance(account.getBalance() - money);
-        // 현재 계좌 잔액을 getter로 불러와서 예금액(money)를 더한 후
-        // setBalance로 더한 금액을 넣기.
+
     }
 
 }
