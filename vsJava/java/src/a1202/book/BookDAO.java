@@ -97,7 +97,7 @@ public class BookDAO {
             System.out.print("출판연도 : ");
             bb.setYear(sc.nextInt());
 
-            update(index, bb); // 확인필요
+            update(index, bb);
         }
     }
 
