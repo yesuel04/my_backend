@@ -39,6 +39,10 @@ public class Main1 {
         for (Student student : students) {
             System.out.println(student);
         }
+
+        System.out.println();
+        Collections.sort(students, (student1,student2) -> student1.getName() .compareTo(student2.getName()));
+        students.forEach(s-> System.out.println(s));
   
     }
   
