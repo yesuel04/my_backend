@@ -16,8 +16,6 @@ public class Calendar2 {
         long diff = endMillis - startMillis;
         long diffDays = diff / (24*60*60*1000);
         System.out.println("두 날짜의 차이는 "+ diffDays +"일 입니다.");
-        
-
-        
+          
     }
 }
