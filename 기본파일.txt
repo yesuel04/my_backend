@@ -12,3 +12,18 @@ https://github.com/bhher/backend
 비밀번호: 174424
 
 https://whaleon.us/o/CSqqEb/483e7266af284010a0c3568c26acdef2
+
+
+http://bhher1.dothome.co.kr/
+
+
+openWeather API key
+
+ae2ef5de65e25388a36b43c17b0a6711
+
+리액트
+> npx create-react-app test
+> cd ./test
+/test> npm star
+
+node_modules 재설치에는 npm i 명령어 입력
