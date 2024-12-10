@@ -40,8 +40,4 @@ public class Meal {
     public String toString() {
         return "Meal [day=" + day + ", store=" + store + ", menu=" + menu + ", price=" + price + "]";
     }
-
-    public void printMeal() {
-        System.out.printf("| %-6s | %-12s | %-13s | %-9d |\n", day, store, menu, price);
-    }
 }

@@ -5,45 +5,52 @@ import java.util.Scanner;
 
 public class Planner {
 
-    // 식사 기록 추가
-    public static void addMeal(ArrayList<Meal> meals, Scanner scanner) {
-        System.out.print("날짜 (예: 월요일): ");
-        String day = scanner.nextLine();
-
-        System.out.print("가게명: ");
-        String store = scanner.nextLine();
-
-        System.out.print("메뉴: ");
-        String menu = scanner.nextLine();
-
-        System.out.print("가격(원): ");
-        int price = scanner.nextInt();
-        scanner.nextLine();  // 버퍼 비우기
-
-        meals.add(new Meal(day, store, menu, price));  // ArrayList에 추가
-        System.out.println("식사 기록이 추가되었습니다.");
+    //식사 기록 출력하기(범용)
+    private static void printMeal(Meal meal) {
+        System.out.printf("| %-3s | %-10s | %-12s | %-12d 원 |\n", meal.getDay(), meal.getStore(), meal.getMenu(), meal.getPrice());
     }
 
-    // 식사 기록 조회
+    // 1. 식사 기록하기
+    public static void addMeal(ArrayList<Meal> meals, Scanner scan) {
+        System.out.print("날짜(예: 월요일) >> ");
+        String day = scan.nextLine();
+
+        System.out.print("가게 이름 >> ");
+        String store = scan.nextLine();
+
+        System.out.print("메뉴 >> ");
+        String menu = scan.nextLine();
+
+        System.out.print("가격(원) >> ");
+        int price = scan.nextInt();
+        scan.nextLine();
+
+        meals.add(new Meal(day, store, menu, price));
+        System.out.println("\n [ 식사 기록 완료 ] ");
+    }
+
+    // 2. 식사 기록 확인하기
     public static void viewMeals(ArrayList<Meal> meals) {
         if (meals.isEmpty()) {
-            System.out.println("식사 기록이 없습니다.");
+            System.out.println(" [ 식사 기록이 없습니다. ] ");
             return;
         }
 
-        System.out.println("\n식사 기록:");
-        System.out.println("| 요일   | 가게명       | 메뉴          | 가격(원)  |");
-        System.out.println("|--------|--------------|---------------|-----------|");
+        System.out.println("\n [ 나의 식사 기록 ] ");
+        System.out.println("+--------|---------------|-----------------|--------------+");
+        System.out.println("| 요일   | 가게 이름     | 메뉴            | 가격(원)     |");
+        System.out.println("|--------|---------------|-----------------|--------------|");
         for (Meal meal : meals) {
-            meal.printMeal();
+            printMeal(meal);
         }
+        System.out.println("+--------|---------------|-----------------|--------------+");
     }
 
-    // 식사 기록 수정
-    public static void updateMeal(ArrayList<Meal> meals, Scanner scanner) {
+    // 3. 식사 기록 수정하기
+    public static void updateMeal(ArrayList<Meal> meals, Scanner scan) {
         System.out.print("수정할 기록의 번호 (1부터 시작): ");
-        int index = scanner.nextInt() - 1;  // 인덱스는 0부터 시작하므로 1을 빼서 처리
-        scanner.nextLine();  // 버퍼 비우기
+        int index = scan.nextInt() - 1;
+        scan.nextLine();
 
         if (index < 0 || index >= meals.size()) {
             System.out.println("잘못된 번호입니다.");
@@ -51,35 +58,53 @@ public class Planner {
         }
 
         Meal meal = meals.get(index);
-        System.out.println("수정할 식사 기록:");
-        meal.printMeal();
+        System.out.println(" [ 수정할 식사 기록 확인 ] ");
+        printMeal(meal);
 
-        // 새로운 값 입력 받기
-        System.out.print("새로운 가게명: ");
-        meal.store = scanner.nextLine();
+        System.out.println(" [ 새로운 가게 이름을 입력해주세요. ] ");
+        System.out.print(meal.store);
+        System.out.print(" >> ");
+        meal.store = scan.nextLine();
 
-        System.out.print("새로운 메뉴: ");
-        meal.menu = scanner.nextLine();
+        System.out.println(" [ 새로운 메뉴를 입력해주세요. ] ");
+        System.out.print(meal.menu);
+        System.out.print(" >> ");
+        meal.menu = scan.nextLine();
 
-        System.out.print("새로운 가격(원): ");
-        meal.price = scanner.nextInt();
-        scanner.nextLine();  // 버퍼 비우기
+        System.out.println(" [ 새로운 가격(원)을 입력해주세요. ] ");
+        System.out.print(meal.price);
+        System.out.print(" >> ");
+        meal.price = scan.nextInt();
+        scan.nextLine();
 
-        System.out.println("식사 기록이 수정되었습니다.");
+        System.out.println(" [ 식사 기록이 수정되었습니다. ] ");
     }
 
-    // 식사 기록 삭제
-    public static void deleteMeal(ArrayList<Meal> meals, Scanner scanner) {
+    // 4. 식사 기록 삭제하기
+    public static void deleteMeal(ArrayList<Meal> meals, Scanner scan) {
         System.out.print("삭제할 기록의 번호 (1부터 시작): ");
-        int index = scanner.nextInt() - 1;  // 인덱스는 0부터 시작하므로 1을 빼서 처리
-        scanner.nextLine();  // 버퍼 비우기
+        int index = scan.nextInt() - 1;
+        scan.nextLine();
 
         if (index < 0 || index >= meals.size()) {
             System.out.println("잘못된 번호입니다.");
             return;
         }
 
-        meals.remove(index);  // ArrayList에서 해당 인덱스의 식사 기록을 삭제
-        System.out.println("식사 기록이 삭제되었습니다.");
+        meals.remove(index);
+        System.out.println(" [ 식사 기록이 삭제되었습니다. ] ");
     }
+
+    // 5. 주간 총 금액 계산 메서드
+    static void WeeklyTotal(ArrayList<Meal> meals) {
+        int total = 0;
+        for (Meal meal : meals) {
+            total += meal.getPrice();
+        }
+
+        System.out.println("\n--------------- [ 주간 식사 총 금액 ] ---------------\n");
+        System.out.printf("         이번 주 식사 총 금액 >> %d 원\n", total);
+        System.out.println("\n----------------------------------------------------\n");
+    }
+
 }
