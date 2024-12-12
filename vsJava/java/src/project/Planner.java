@@ -7,7 +7,7 @@ public class Planner {
 
     //식사 기록 출력하기(범용)
     private static void printMeal(Meal meal) {
-        System.out.printf("| %-3s | %-10s | %-12s | %-12d 원 |\n", meal.getDay(), meal.getStore(), meal.getMenu(), meal.getPrice());
+        System.out.printf("| %-3s | %-12s | %-14s | %-14d 원 |\n", meal.getDay(), meal.getStore(), meal.getMenu(), meal.getPrice());
     }
 
     // 1. 식사 기록하기
@@ -103,7 +103,7 @@ public class Planner {
         }
 
         System.out.println("\n--------------- [ 주간 식사 총 금액 ] ---------------\n");
-        System.out.printf("         이번 주 식사 총 금액 >> %d 원\n", total);
+        System.out.printf("\t\t이번 주 식사 총 금액 >> %d 원\n", total);
         System.out.println("\n----------------------------------------------------\n");
     }
 
