@@ -1,0 +1,22 @@
+select count(*), count(고객번호), count(도시), count(지역) from 고객;
+
+select sum(마일리지), avg(마일리지), min(마일리지), max(마일리지) from 고객 where 도시='서울특별시';
+
+select 도시, count(*) as 고객수, avg(마일리지) as 평균마일리지 from 고객 group by 도시;
+
+select 담당자직위, 도시, count(*) as 고객수, avg(마일리지) as 평균마일리지 
+from 고객 group by 담당자직위, 도시 order by 1,2;
+
+select 도시, count(*) as 고객수, avg(마일리지) as 평균마일리지 
+from 고객 group by 도시 having count(*) >= 10;
+
+select 도시, sum(마일리지) from 고객 where 고객번호 like 'T%' group by 도시
+having sum(마일리지) >= 1000;
+
+select 담당자직위, max(마일리지) as 최대마일리지 from 고객 where 도시 like '%광역시'
+group by 담당자직위 having max(마일리지) >= 10000;
+
+select 제품명, sum(재고) as 재고합 from 제품 where 제품명 like '%아이스크림%' group by 제품명;
+
+select if(마일리지 > 50000, 'vip고객', '일반고객') as 고객구분, count(*) as 고객수, avg(마일리지) 
+as 평균마일리지 from 고객 group by if(마일리지 > 50000, 'vip고객', '일반고객');
