@@ -1,43 +1,44 @@
 package project;
 
+import java.time.LocalDate;
+
 public class Meal {
-    String day;
+    int year;
+    int month;
+    int day;
     String store;
     String menu;
     int price;
-    
-    public Meal(String day, String store, String menu, int price) {
-        this.day = day;
-        this.store = store;
-        this.menu = menu;
-        this.price = price;
+
+    public int getYear() {
+        return year;
     }
-    public String getDay() {
+    public int getMonth() {
+        return month;
+    }
+    public int getDay() {
         return day;
-    }
-    public void setDay(String day) {
-        this.day = day;
     }
     public String getStore() {
         return store;
     }
-    public void setStore(String store) {
-        this.store = store;
-    }
     public String getMenu() {
         return menu;
-    }
-    public void setMenu(String menu) {
-        this.menu = menu;
     }
     public int getPrice() {
         return price;
     }
-    public void setPrice(int price) {
+
+    public Meal(int year, int month, int day, String store, String menu, int price) {
+        this.year = year;
+        this.month = month;
+        this.day = day;
+        this.store = store;
+        this.menu = menu;
         this.price = price;
     }
-    @Override
-    public String toString() {
-        return "Meal [day=" + day + ", store=" + store + ", menu=" + menu + ", price=" + price + "]";
+
+    LocalDate getDate() {
+        return LocalDate.of(this.year, this.month, this.day);
     }
 }
