@@ -1,0 +1,18 @@
+
+{{>layouts/header}}
+<form action="/articles/create1" method="post" class="container mt-3">
+    <div class="mb-3">
+        <label for="name" class="form-label">이름</label>
+        <input type="text" class="form-control" name="name">
+    </div>
+    <div class="mb-3">
+        <label for="nickname" class="form-label">닉네임</label>
+        <input type="text" class="form-control" name="nickname">
+    </div>
+    <div class="mb-3">
+        <label for="password" class="form-label">패스워드</label>
+        <input type="password" class="form-control" name="password">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{{>layouts/footer}}
