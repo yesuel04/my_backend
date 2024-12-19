@@ -1,15 +1,15 @@
 package com.example.firstproject.dto;
 
+import com.example.firstproject.entity.Article;
 import com.example.firstproject.entity.Member;
 
 public class MemberForm {
-    private Long id;
+    //private Long id;
     private String name;
-    private String nickname;
-    private String password;
+    private  String nickname;
+    private  String password;
 
-    public MemberForm(Long id, String name, String nickname, String password) {
-        this.id = id;
+    public MemberForm(String name, String nickname, String password) {
         this.name = name;
         this.nickname = nickname;
         this.password = password;
@@ -25,6 +25,6 @@ public class MemberForm {
     }
 
     public Member toEntity() {
-        return new Member(null, name, nickname, password);
+       return new Member(null, name, nickname, password);
     }
 }

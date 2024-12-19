@@ -5,22 +5,59 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 
-@Entity // DB가 해당하는 객체를 인식 가능하게 함
+@Entity //DB가 해당 객체를 인식가능하게 함
 public class Article {
-    @Id // Entity의 대표값
-    @GeneratedValue // 1,2,3 자동으로 번호를 추가하는 어노케이션
+    @Id //Entity에 대표값 - 식별
+    @GeneratedValue //1,2,3 자동으로 번호 추가하는 어노테이션
     private Long id;
 
     @Column
-    private String title;
+    private  String title;
 
     @Column
-    private String Content;
+    private String content;
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public void patch(Article article){
+        if(article.title != null){
+            this.title = article.title;
+        }
+        if(article.content != null){
+            this.content = article.content;
+        }
+    }
 
     public Article(Long id, String title, String content) {
         this.id = id;
         this.title = title;
-        Content = content;
+        this.content = content;
+    }
+
+    public Article() {
+
     }
 
     @Override
@@ -28,8 +65,7 @@ public class Article {
         return "Article{" +
                 "id=" + id +
                 ", title='" + title + '\'' +
-                ", Content='" + Content + '\'' +
+                ", content='" + content + '\'' +
                 '}';
     }
-
 }

@@ -11,7 +11,6 @@
     <title>Document</title>
 </head>
 <body>
-<!--네비게이션-->
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">Navbar</a>
@@ -48,3 +47,13 @@
         </div>
     </div>
 </nav>
+
+
+<!--삭제시 경고참-->
+{{#msg}}
+<div class="alert alert-primary alert-dismissible">
+    {{msg}}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+{{/msg}}
