@@ -1,8 +1,10 @@
 package com.example.firstproject.controller;
 
 import com.example.firstproject.dto.ArticleForm;
+import com.example.firstproject.dto.CommentDto;
 import com.example.firstproject.entity.Article;
 import com.example.firstproject.repository.ArticleRepository;
+import com.example.firstproject.service.CommentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,7 +21,11 @@ public class ArticleController {
     @Autowired //스프링 부트가 미리 생성해 놓은 객체를 가져다가 자동 연결
     private ArticleRepository articleRepository;
 
-    @GetMapping("articles/new")
+    @Autowired
+    private CommentService commentService;
+
+    @GetMapping("articles/new") //웹주소
+    //http://localhost:8080/articles/new
     public String newArticleForm(){
         return "articles/new";
     }
@@ -63,8 +69,10 @@ public String show(@PathVariable Long id, Model model){
         //url 에서 id 변수를 가져옴
     //1.id로 데이터를 가져옴
    Article articleEntity = articleRepository.findById(id).orElse(null);
+   List<CommentDto> commentsDtos = commentService.comments(id);
    //2.가져온데이터를 모뎀에 등록
    model.addAttribute("article",articleEntity);
+    model.addAttribute("commentDtos",commentsDtos);
    //보여줄 페이지를 설정!
     return "articles/show";
 
@@ -114,6 +122,8 @@ public String show(@PathVariable Long id, Model model){
 
       return "redirect:/articles";
 }
+
+
 
 
 

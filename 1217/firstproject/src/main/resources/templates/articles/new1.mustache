@@ -1,6 +1,6 @@
 
 {{>layouts/header}}
-<form action="/articles/create1" method="post" class="container mt-3">
+<form action="/articles/create1" method="post" class="container">
     <div class="mb-3">
         <label for="name" class="form-label">이름</label>
         <input type="text" class="form-control" name="name">
@@ -10,9 +10,10 @@
         <input type="text" class="form-control" name="nickname">
     </div>
     <div class="mb-3">
-        <label for="password" class="form-label">패스워드</label>
+        <label for="password" class="form-label">비밀번호</label>
         <input type="password" class="form-control" name="password">
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary" >Submit</button>
 </form>
 {{>layouts/footer}}
+
