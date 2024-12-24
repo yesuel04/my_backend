@@ -1,6 +1,8 @@
 package study.project_study.dto;
 
 import lombok.*;
+import study.project_study.entity.Member;
+
 
 @Getter
 @Setter
@@ -14,6 +16,10 @@ public class MemberForm {
     private String name;
     private String nickname;
     private String password;
+
+    public Member toEntity() {
+        return new Member(id, name, nickname, password);
+    }
 
 
 }

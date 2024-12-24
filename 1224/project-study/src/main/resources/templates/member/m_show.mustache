@@ -2,7 +2,6 @@
 <table class="table">
     <thead>
     <tr>
-        <th scope="col">회원번호(Num)</th>
         <th scope="col">ID</th>
         <th scope="col">Name</th>
         <th scope="col">Nickname</th>
@@ -10,18 +9,18 @@
     </tr>
     </thead>
     <tbody>
-    {{#memberList}}
+    {{#member}}
         <tr>
-            <th>{{num}}</th>
             <th>{{id}}</th>
-            <td><a href="/member/{{id}}">{{name}}</a></td>
-            <td><a href="/member/{{id}}">{{nickname}}</a></td>
+            <td><a href="/member/{{num}}">{{name}}</a></td>
+            <td><a href="/member/{{num}}">{{nickname}}</a></td>
             <td>{{password}}</td>
         </tr>
-    {{/memberList}}
+    {{/member}}
     </tbody>
 </table>
 
-<a href="/member/new" class="btn btn-primary">새로 작성하기</a>
-
+<a href="/member/{{member.num}}/edit" class="btn btn-primary">Edit</a>
+<a href="/member/{{member.num}}/delete" class="btn btn-danger">Delete</a>
+<a href="/member">Go to memberList</a>
 {{>layouts/footer}}
