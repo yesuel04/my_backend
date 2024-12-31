@@ -8,7 +8,7 @@ CREATE USER 'highgarden_user'@'localhost' IDENTIFIED BY '1234';
 
 GRANT ALL PRIVILEGES ON highgarden_db.* TO 'highgarden_user'@'localhost';
 
-FLUSH PREVILIGES;
+FLUSH privileges;
 
 3. table 생성 (2개).
 
