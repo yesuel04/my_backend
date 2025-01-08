@@ -16,14 +16,95 @@ https://whaleon.us/o/CSqqEb/483e7266af284010a0c3568c26acdef2
 
 http://bhher1.dothome.co.kr/
 
+------------------------------------------------------------------------
 
 openWeather API key
 
 ae2ef5de65e25388a36b43c17b0a6711
 
+------------------------------------------------------------------------
+
 리액트
 > npx create-react-app test
 > cd ./test
-/test> npm star
+/test> npm start
+
+> npm install react-router-dom (Router 이용시)
 
 node_modules 재설치에는 npm i 명령어 입력
+(node_modules 폴더를 제외한 내용들을 복사해서 
+이미 만들어 놓은 test2 폴더(새로운 폴더명은 알아서 지정)에 붙여넣기를 한 뒤에
+아래의 작업을 따라함.)
+PS C:\Users\YONSAI\Desktop\yonsaiIT\vscode_react\test1> cd..
+PS C:\Users\YONSAI\Desktop\yonsaiIT\vscode_react> cd ./test2
+PS C:\Users\YONSAI\Desktop\yonsaiIT\vscode_react\test2> npm i
+
+확장자 마켓에서 react를 검색 시 나오는 최상단의 앱 설치
+그 이후에 새로운 파일을 생성 시 >>>> rfce <<<< 를 입력하면
+자동완성 된 기본 포맷이 나옴.
+
+오류 날 시
+npm install react@18 react-dom@18
+npm install web-vitals
+
+인텔리제이에서 실행할 시
+ npm install axios --save
+ npm install react-router-dom --save
+ npm install http-proxy-middleware --save
+
+------------------------------------------------------------------------
+
+
+자료 사이트 
+https://learnjs.vlpt.us/
+
+------------------------------------------------------------------------
+
+스프링
+https://start.spring.io/
+
+------------------------------------------------------------------------
+
+json placeholder
+https://jsonplaceholder.typicode.com/
+
+------------------------------------------------------------------------
+
+talend
+chrome-extension://aejoelaoggembcahagimdiliamlcdmfm/index.html#requests
+
+------------------------------------------------------------------------
+
+포스트맨(구글 계정으로 로그인)
+https://www.postman.com/
+
+------------------------------------------------------------------------
+
+인텔리제이로 board_crud 폴더에서 작업할 때 오류 날 시
+application.yml 에 아래 내용을 넣기.
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/board_crud?useSSL=false&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root  # -> 앞서 입력했던 MySQL username 입력
+    password: 1234  # -> 앞서 설정했던 MySQL 비밀번호 입력
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  main:
+    allow-circular-references: true
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        show_sql: false
+        format_sql: true
+        default_batch_fetch_size: 100 # 배치전략을 위해 필요
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+
+--------------------------------------------------------------------------------
+
+
+
+
