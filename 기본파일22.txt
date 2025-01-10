@@ -35,5 +35,13 @@ https://tabby.sh/
 
 ----------------------------------------------------------
 
+DB를 사용하기 위해서는 application.properties (Gradle 기준)에 mybatis 설정 필요
+
+spring.datasource.url=jdbc:mysql://localhost:3306/board_crud?useSSL=false&serverTimezone=UTC
+spring.datasource.username=root
+spring.datasource.password=1234
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+mybatis.mapper-locations=classpath:mapper/*.xml
+
 
 
