@@ -1,0 +1,136 @@
+0110  데이터베이스에 HelloWorld 입력하기.
+
+controller는 제어 도구
+service는 실행 작업 도구
+mapper는 db 작업 도구
+
+-----------------------------------------------------------
+
+1. DB를 사용하기 위해서는 application.properties (Gradle 기준)에 mybatis 설정 필요
+
+spring.datasource.url=jdbc:mysql://localhost:3306/board_crud?useSSL=false&serverTimezone=UTC
+spring.datasource.username=root
+spring.datasource.password=1234
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+mybatis.mapper-locations=classpath:mapper/*.xml
+
+>> 로컬호스트 포트 번호는 때에 따라 수정.
+>> DB명도 때에 따라 수정.
+>> 유저네임과 패스워드도 때에 따라 수정.
+
+-----------------------------------------------------------
+
+2. build.gradle 에 mybatis와 mysql를 사용하기 위한 dependencies(의존성) 추가.
+>> spring.io 에서 의존성 추가 후 explore 해서 코드 넣기.
+>> 빌드 그레이들 적용 버튼 꼭 누르기!!!
+
+*** Mybatis 는 mysql를 사용하기 위한 프레임 워크이다. ***
+*** mysql 은 데이터베이스를 관리하기 위한 시스템이다.  == DBSM 이다. ***
+
+-----------------------------------------------------------
+
+3. resources 에 /mapper/mapper(파일명은 알아서 짓기).xml 추가
+>> DB에 적용할 sql문을 입력하는 파일.
+>> mapper 태그에 namespace 루트 입력 필수!! mapper.java 의 루트를 입력하면 됨.
+
+<?xml version="1.0" encoding="UTF-8" ?> <!-- 필수 입력 코드 -->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> <!-- 필수 입력 코드 -->
+<mapper namespace="com.example.c702_2.mapper.MessageMapper">
+    <insert id="insertMapper">
+        insert into board (content, title) values (#{content}, #{title});
+    </insert>
+</mapper>
+
+***** mapper를 사용하는 이유 *****
+>> 그게 스프링에서의 약속임.
+>> DB에 값을 넘기고 받는 작업은 모두 mapper를 통해서 함.
+
+-----------------------------------------------------------
+
+4. java 에 /mapper/MessageMapper(파일명은 알아서 짓기).java 추가
+>> mapper는 java class 파일이 아니라 java interface를 사용.
+>> 메소드만 생성.
+>> 상세 작업 내용은 mapper.xml 파일 쪽에서 입력함.
+
+package com.example.c702_2.mapper;
+import org.apache.ibatis.annotations.Mapper;
+@Mapper
+public interface MessageMapper {
+    void insertMapper(String newCon, String newTitle);
+}
+
+-----------------------------------------------------------
+
+5. java 에 /service/MessageService(파일명은 알아서 짓기).java 추가
+>> service는 java class 파일로 생성.
+>> controller에게 값을 받아서 가공 후 mapper.java에게 넘기기.
+>> DB에 넣을 내용을 가공하는 과정도 여기서 함.
+>> @Autowired 로 mapper에 넘기기 필수.
+
+package com.example.c702_2.service;
+
+import com.example.c702_2.mapper.MessageMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Service
+public class MessageService {
+    @Autowired
+    MessageMapper messageMapper;
+    @GetMapping
+    public void createMessage(String myTxt){
+        String newCon = myTxt + "-newContent";
+        String newTitle = myTxt + "-newTitle";
+        messageMapper.insertMapper(newCon, newTitle);
+    }
+}
+
+-----------------------------------------------------------
+
+6. java 에 /controller/MessageController(파일명은 알아서 짓기).java 추가
+>> 제어 도구
+>> 입력받은 값을 넘기려면 @PathVariable("넘길 변수 이름") 사용 필수.
+>> @Autowired 로 service에 넘기기 필수.
+
+package com.example.c702_2.controller;
+
+import com.example.c702_2.service.MessageService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+@Controller
+public class MessageController {
+    @Autowired
+    MessageService messageService;
+    @GetMapping("/message/{name}")
+    @ResponseBody // 타임리프를 사용하지 않고 리턴 값을 바로 출력할 때 사용하는 어노테이션
+    public String message(@PathVariable("name") String myTxt){
+        messageService.createMessage(myTxt);
+        return "입력 성공한 텍스트 : " + myTxt;
+    }
+}
+
+-----------------------------------------------------------
+
+7. DB table에 값이 제대로 입력되었는지 확인(워크밴치, cmd 등)
+
+-----------------------------------------------------------
+
+8. 끝
+
+-----------------------------------------------------------
+
+9. 디버깅 확인
+>> Controller에서 breakpoint를 걸고 확인
+>> breakpoint : messageService.createMessage(myTxt);
+>> 디버그 실행
+>> 주소창에 localhost:8080/message/apple 입력
+>> 다시 인텔리제이가 켜지면 디버깅 창에서 Step into (F7) 누르기
+>> 성공적으로 작동 성공 문장 확인 후 DB table에 값이 제대로 입력되었는지 확인
+>> 성공적으로 입력되었다면 끝
+
+>> 디버깅이 제대로 작동을 안할 시 인텔리제이 메뉴바에서 File/Invalidate Cashes 로 껐다 켠 후에 다시 실행.

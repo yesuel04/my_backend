@@ -1,0 +1,65 @@
+*** 깃허브 명령어 ***
+
+git init
+>> 깃허브에 연결하기 위한 초기화 단계
+
+git branch branchName
+git br branchName
+>> 깃허브 브랜치 만들기
+
+git checkout branchName
+git checkout main
+git co branchName
+>> 해당 브랜치로 HEAD 변경
+>> 로그 입력시에 (HEAD -> main) 라고 출력.
+>> 브랜치 이름이나 메인으로 연결 시에는 화살표 표시가 나옴.
+>> 해당 브랜치로 HEAD 연결이 된 상태.
+
+git checkout 9b5d6d5(코드번호)
+>> 해당 코드로 HEAD 이동
+>> 로그창에 (HEAD, 9b5d6d5) 로 뜸.
+>> 해당 브랜치로 HEAD 이동만 했을 뿐 연결은 안된 상태.
+
+git log
+git lg
+>> 깃허브 로그 확인.
+>> 깃허브 업데이트 내역을 그래프로 볼 수 있음.
+
+git cherry-pick branchName
+git cherry-pick 9b5d6d5(코드번호)
+>> 현재 브랜치로 원하는 커밋만 가져오기
+>> 잘 사용하진 않음
+
+git config --local user.name {input name}
+git confing --local user.email {input email}
+>> 유저 이름, 이메일 변경하기 (로컬)
+
+git config --global user.name {input name}
+git confing --global user.email {input email}
+>> 유저 이름, 이메일 변경하기 (글로벌)
+
+
+git status
+git st
+>> 상태 확인
+
+git add FileName
+>> 해당 파일만 추가하기
+git add .
+>> 전체 파일 추가하기
+
+git commit -m "메세지 입력"
+>> 커밋하기
+>> 로컬에만 추가. push를 해야만 타인과 공유가 되는 것.
+
+git merge branchName
+>> 합치기
+>> 충돌 발생 가능.
+>> 현재(HEAD)로 브랜치의 내용을 가져와 합치는 것.
+
+git push origin main
+>> 깃허브 올리기
+
+git pull origin main
+>> 깃허브에서 내려받기
+
