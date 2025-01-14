@@ -4,6 +4,10 @@ controller는 제어 도구
 service는 실행 작업 도구
 mapper는 db 작업 도구
 
+*** 폴더 위치 확인 필수 ***
+java 폴더 밑에 controller, service, mapper 폴더는 같은 선상에 위치한 폴더임.
+resources 폴더 밑에 static, templates, mapper 폴더는 같은 선상에 위치한 폴더임. 
+
 -----------------------------------------------------------
 
 1. DB를 사용하기 위해서는 application.properties (Gradle 기준)에 mybatis 설정 필요
@@ -29,7 +33,7 @@ mybatis.mapper-locations=classpath:mapper/*.xml
 
 -----------------------------------------------------------
 
-3. resources 에 /mapper/mapper(파일명은 알아서 짓기).xml 추가
+3. resources 에 templates/mapper/mapper(파일명은 알아서 짓기).xml 추가
 >> DB에 적용할 sql문을 입력하는 파일.
 >> mapper 태그에 namespace 루트 입력 필수!! mapper.java 의 루트를 입력하면 됨.
 

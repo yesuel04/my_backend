@@ -1,0 +1,39 @@
+
+< sql 구문 연습하기 : 과일가게>
+
+create table purchase (
+id int not null auto_increment primary key,
+item_id int not null comment '품명(FK)',
+quantity int default 0 comment '수량',
+spec_id int default 0 comment '규격(FK)',
+puchase_at timestamp default current_timestamp() comment '구입일시',
+supplier_id int default 0 comment '구입처(FK)'
+);
+
+create table items (
+id int not null auto_increment primary key,
+name varchar(100) not null unique comment '품명'
+);
+
+create table spec (
+id int not null auto_increment primary key,
+name varchar(5) unique comment '규격명'
+);
+
+create table supply (
+id int not null auto_increment primary key,
+name varchar(100) not null comment '상호',
+contact1 varchar(15) null comment '대표연락처',
+contact2 varchar(15) null comment '추가연락처',
+business_number varchar(10) null unique comment '사업자번호'
+);
+
+alter table purchase
+add foreign key (item_id) references items(id);
+
+alter table purchase
+add foreign key (spec_id) references spec(id);
+
+alter table purchase
+add foreign key (supplier_id) references supply(id);
+

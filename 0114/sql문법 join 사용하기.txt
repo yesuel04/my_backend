@@ -1,0 +1,59 @@
+
+< sql문법 : join 사용하기 >
+
+*** 사전 조건 : 반드시 foreign key가 적용되어 있을 것. ***
+
+select A, B from ~~~
+=> A 정보가 먼저 출력되고 B 정보가 출력됨.
+
+select A, B from B b inner join A a on (foreign key 조건식);
+=> from 이후 B와 A의 자리를 바꿔도 동일하게 출력됨.
+=> 다만 inner join 하는 조건식이 여러개면 안됨.
+=> 테이블 명의 축약 형식은 마음대로 설정하면 됨. 앞글자를 따는 것이 가장 이상적.
+
+*** 엑셀 파일 참고 ***
+
+
+select p.* , i.* from items i
+inner join purchase p on p.item_id = i.id;
+
+select i.* , p.* from items i
+inner join purchase p on p.item_id = i.id;
+
+select p.* , i.* from purchase p 
+inner join items i on p.item_id = i.id;
+
+select i.name, p.quantity, p.spec_id from purchase p 
+inner join items i on p.item_id = i.id;
+
+select s.name from purchase p 
+inner join spec s on p.spec_id = s.id;
+
+select i.name, p.quantity, s.name from purchase p 
+inner join items i on p.item_id = i.id
+inner join spec s on p.spec_id = s.id;
+
+select i.name, p.quantity, s.name, a.name, a.contact1 from purchase p
+inner join items i on p.item_id = i.id
+inner join spec s on p.spec_id = s.id
+inner join supply a on p.supplier_id = a.id;
+
+select i.name as fruit, p.quantity, s.name as unit, a.name as shop, a.contact1 from purchase p
+inner join items i on p.item_id = i.id
+inner join spec s on p.spec_id = s.id
+inner join supply a on p.supplier_id = a.id;
+
+
+< sql문법 : view 사용하기 >
+
+create view purchase_view as
+select i.name as fruit, p.quantity, s.name as unit, a.name as shop, a.contact1 from purchase p
+inner join items i on p.item_id = i.id
+inner join spec s on p.spec_id = s.id
+inner join supply a on p.supplier_id = a.id;
+=> 이때는 create만 했기에 출력이 안 됨. 생성만 된 거.
+
+select * from purchase_view;
+=> select 를 해야 출력. 위의 select 문법과 동일한 결과가 출력된다.
+
+
