@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #btn1{
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            border:  2px solid #333;
+            border-radius: 5px;
+            background: #f1f1f1;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var numbers = [1,2,3,4,5];
+
+        // for(var i=0; i<numbers.length; i++){
+        //     document.write(numbers[i],"<br>");
+        // }
+
+        numbers.forEach(function(i){
+            document.write(i,"<br>");
+        });
+        
+    </script>
+</body>
+</html>

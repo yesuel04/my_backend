@@ -1,0 +1,205 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.wrap{
+    margin: 0 auto;
+    width: 1070px;
+}
+h1{
+    margin: 50px 0 30px 0;
+}
+.bigbox{
+    margin: 0 auto;
+    width: 100%;
+    height: 800px;
+    position: relative;
+    border: 1px solid red;
+}
+
+/* 박스 */
+.box{
+    position: absolute;
+    /* width: 260px;
+    height: 260px; */
+}
+.box::after{
+    content: " ";
+    background-color:#225afb;
+    position: absolute;
+    transition: all 0.2s;
+    opacity: 0;
+}
+
+.box1{
+    width: 260px;
+    height: 260px;
+    top: 0;
+    left: 0;
+}
+.box1::after{
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.box1:hover::after{
+    opacity: 0.8;
+    width: 100%;
+}
+
+.box2{
+    width: 260px;
+    height: 530px;
+    top: 0;
+    left: 270px;
+}
+.box2::after{
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0px;
+}
+.box2:hover::after{
+    opacity: 0.8;
+    width: 100%;
+}
+
+.box3{
+    width: 260px;
+    height: 260px;
+    top: 0;
+    left: 540px;
+}
+.box3::after{
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0px;
+}
+.box3:hover::after{
+    opacity: 0.8;
+    width: 100%;
+}
+
+.box4{
+    width: 260px;
+    height: 260px;
+    top: 0;
+    right: 0;
+}
+.box4::after{
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0px;
+}
+.box4:hover::after{
+    opacity: 0.8;
+    width: 100%;
+}
+
+.box5{
+    width: 260px;
+    height: 260px;
+    top: 270px;
+    left: 0;
+}
+.box5::after{
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0px;
+}
+.box5:hover::after{
+    opacity: 0.8;
+    width: 100%;
+}
+
+.box6{
+    width: 530px;
+    height: 260px;
+    top: 270px;
+    left: 540px;
+}
+.box6::after{
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0px;
+}
+.box6:hover::after{
+    opacity: 0.8;
+    height: 100%;
+}
+
+.box7{
+    width: 260px;
+    height: 260px;
+    top: 540px;
+    left: 0;
+}
+.box7::after{
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0px;
+}
+.box7:hover::after{
+    opacity: 0.8;
+    width: 100%;
+}
+
+.box8{
+    width: 530px;
+    height: 260px;
+    top: 540px;
+    left: 270px;
+}
+.box8::after{
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0px;
+}
+.box8:hover::after{
+    opacity: 0.8;
+    height: 100%;
+}
+
+.box9{
+    width: 260px;
+    height: 260px;
+    top: 540px;
+    right: 0;
+}
+.box9::after{
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0px;
+}
+.box9:hover::after{
+    opacity: 0.8;
+    width: 100%;
+}
+
+.box p{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    padding-top: 70px;
+    box-sizing: border-box;
+    color: #fff;
+    text-align: center;
+    transition: all 0.4s;
+    opacity: 0;
+    z-index: 1;
+
+    background: url(../img/more.png) no-repeat 50% 70%;
+}
+.box:hover p{
+    opacity: 1;
+}

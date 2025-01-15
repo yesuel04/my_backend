@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul, li{
+    list-style: none;
+}
+a{
+    color: #222;
+    text-decoration: none;
+}
+.wrap{
+    width: 1300px;
+    height: auto;
+    margin: 0 auto;
+    padding-top: 120px;
+    position: relative;
+    justify-content: space-between;
+}
+
+/* 탭메뉴 */
+.content1{
+    width: auto;
+    height: auto;
+}
+.tabWrap{
+    width: 400px;
+    height: 332px;
+}
+.tab_menu{
+    display: flex;
+}
+
+.tab_menu li a{
+    display: block;
+    width: 130px;
+    height: 50px;
+    line-height: 50px;
+    background: #d9d9d9;
+    text-align: center;
+    border-radius: 0 3px 3px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #222;
+}
+.tab_menu li a.active{
+    background: #32557f;
+    color: #fff;
+}
+#tabContent{
+    width: 360px;
+    height: 242px;
+    border: 1px solid #aaa;
+    border-radius: 0 5px 5px 5px;
+    padding: 20px;
+}
+#tabContent div ul li{
+    font-size: 16px;
+    font-weight: bold;
+    padding-bottom: 30px; 
+}
+#tabContent div ul li:first-child{
+    margin-top: 10px;
+}
+#tabContent > div {
+    display: none;
+}
+#tabContent > div:nth-child(1) {
+    display: block;
+}
+#tabContent p{
+    width: 350px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 슬라이드 */
+.content2{
+    width: auto;
+    height: auto;
+}
+.bannerWrap{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 400px;
+    height: 195px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.bannerWrap .banner{
+    display: flex;
+}
+.bannerWrap .banner li{
+    width: 400px;
+}
+.bannerWrap .banner img{
+    width: 400px;
+    height: 195px;
+}
+
+/* 슬라이드 버튼 */
+.btn{
+    position: absolute;
+    bottom: 0;
+    z-index: 10;
+    width: 400px;
+    height: 30px;
+    background: rgba(0, 0, 0, 0.5);
+}
+.btn p{
+    position: absolute;
+    left: 45%;
+    top: 20%;
+}
+.btn img{
+    width: 18px;
+}

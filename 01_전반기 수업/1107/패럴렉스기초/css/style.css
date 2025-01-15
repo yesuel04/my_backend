@@ -1,0 +1,38 @@
+body{
+    height: 3300px;
+}
+h1{
+    font-size: 100%;
+}
+.indicator{
+    position: fixed;
+    right: 10px;
+    top: 10px;
+}
+li{
+    list-style: none;
+    height: 60px;
+    top: 40px;
+    width: 60px;
+    position: fixed;
+}
+.item1{
+    left: 20px;
+    background: coral;
+}
+.item2{
+    left: 100px;
+    background: cornflowerblue;
+}
+.item3{
+    left: 180px;
+    background: cornsilk;
+}
+.item4{
+    left: 260px;
+    background: crimson;
+}
+.item5{
+    left: 340px;
+    background: chartreuse;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1 class="count">0000</h1>
+    <button type="button" onclick="clearInterval(a)">멈춰</button>
+    <script>
+        $(function(){
+            var num = 0;
+            // autoCount();
+            var a = setInterval(autoCount, 300);
+            function autoCount(){
+                num++;
+                $('.count').text(num);
+            }
+        });
+    </script>
+</body>
+</html>

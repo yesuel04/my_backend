@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+    <script>
+        $(function(){
+            var count = 0;
+            var text1 = $('#text');
+            var msg;
+            var comp;
+            var kkk;
+            main();
+            function main(){
+                msg = text1.text();
+                // alert(msg);
+                comp = msg.length;
+                // alert(comp);
+                ttt();
+            }
+            function ttt(){
+                if(count <= comp){
+                    kkk = msg.substring(0,count);
+                    text1.text(kkk);
+                    count++;
+                    setTimeout(ttt, 100);
+                }else{
+                    count=0;
+                    main();
+                }
+            }
+        });
+    </script>
+</head>
+<body>
+    <h1 id="text">떡냥이 살까말까 진지하게 고민중...아 근데 차라리 솜깅이를</h1>
+</body>
+</html>

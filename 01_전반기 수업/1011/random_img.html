@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var imgNum = Math.floor(Math.random()*7)+1;
+        // alert(imgNum);
+
+        // 1. Math.random()의 값이 0~1 사이에 나오고 그 값에 7을 곱하면
+        //    0.00000~6.99999 로 값이 나옴.
+        // 2. Math.floor 는 소수점을 버리므로 0~6 사이의 값이 나옴.
+        // 3. 나온 값에 +1을 해주면 imgNum의 값은 1~7 사이의 값으로 나옴.
+
+        // document.write("<img src='./images/img" + imgNum + ".jpg'>");
+        document.write(`<img src='./images/img${imgNum}.jpg'>`);
+        // 랜덤하게 이미지 출력.
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="typed.js"></script>
+    <title>Document</title>
+    <script>
+        $(function(){
+            var typed2 = new Typed('#typed1',{
+                string : ['원하는 글씨를','순서대로','출력하기'],
+                typeSpeed : 50,
+                backSpeed : 50,
+                attr:'placeholder',
+                bindInputFocusEvents:true,
+                loop:true,
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1 id="typed1">떡냥이 살까말까 진지하게 고민중...아 근데 차라리 솜깅이를</h1>
+</body>
+</html>

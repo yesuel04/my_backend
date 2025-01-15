@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //2. 객체 해체
+        const person = {
+            name : "Alex",
+            age : 21,
+            country : "USA",
+        }
+        //객체 해체
+        const {name, age, country} = person;
+        console.log(name);
+        console.log(age);
+        console.log(country);
+
+
+        //변수명 변경 및 기본값 설정
+        const user = {
+            username : "hilde bret",
+            email : "hildebert@example.com",
+        }
+        const {username : name1, email, phone="n/a"} = user;
+        console.log(name1);
+        console.log(email);
+        console.log(phone);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

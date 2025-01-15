@@ -1,0 +1,22 @@
+BookDTO 클래스:
+
+int id (도서 ID)
+String title (도서 제목)
+String author (저자)
+int year (출판연도)
+
+생성자 게터 세터 tostring
+
+BookDAO 클래스:
+
+기본 데이터: 초기 3~4권의 도서 정보를 생성.
+        bookList.add(new BookDTO(1, "Java Programming", "Author A", 2020));
+        bookList.add(new BookDTO(2, "Python Basics", "Author B", 2019));
+        bookList.add(new BookDTO(3, "Data Structures", "Author C", 2018));
+
+
+기능:
+도서 추가 (addBook)
+도서 삭제 (deleteBook)
+도서 수정 (updateBook)
+도서 조회 (searchBook)

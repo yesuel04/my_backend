@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <style>
+        *{margin:0;padding:0;}
+        ul,li{list-style:none;}
+        a{text-decoration:none;}
+        .cf:after{
+            content:'';
+            display:block;
+            clear:both;
+        }
+        #wrap{
+            width: 410px;
+            height: 332px;
+            margin: 0 auto;
+            margin-top: 100px;
+        }
+        .box{
+            width: 410px;
+            height: 332px;
+            border: 1px solid red;
+            background: #feeee6;
+        }
+        
+        .box .control > p > a.prev{
+            background: url(./img/ico_16_prev.png) no-repeat 0 0;
+        }
+        .box .control > p > a.pause{
+            background: url(./img/ico_16_pause.png) no-repeat 0 0;
+        }
+        .box .control > p > a.play{
+            background: url(./img/ico_16_play.png) no-repeat 0 0;
+        }
+        .box .control > p > a.next{
+            background: url(./img/ico_16_next.png) no-repeat 0 0;
+        }
+        .banner{
+            width: 350px;
+            height: 282px;
+            padding: 20px 30px 30px
+        }
+        .banner ul {
+            width: 350px;
+            height: 282px;
+            display: flex;
+            /* overflow: hidden; */
+        }
+        .banner ul li a img{
+            border-radius: 10px;
+        }
+    </style>
+    <script>
+
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <div class="box">
+            <p class="tit">홍보존</p>
+            <div class="control">
+                <p><strong>1</strong> / <span>4</span></p>
+				<p>
+                    <a href="#" class="prev"></a>
+					<a href="#" class="pause"></a>
+					<a href="#" class="next"></a>
+				</p>
+            </div>
+            <div class="banner">
+                <ul>
+                    <li><a href="#"><img src="./img/01.png"></a></li>
+                    <li><a href="#"><img src="./img/02.png"></a></li>
+                    <li><a href="#"><img src="./img/03.png"></a></li>
+                    <li><a href="#"><img src="./img/04.png"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

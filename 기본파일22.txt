@@ -1,0 +1,47 @@
+웨일온 회의실
+
+800 428 7878
+
+532602
+
+--------------------------------------------------------
+
+워크플로우
+workflowy.com
+
+https://tinyurl.com/mpabh5xn
+
+-------------------------------------------------------
+
+내 컴퓨터 ip
+192.168.71.209
+
+-------------------------------------------------------
+
+비주얼 스튜디오 코드에서 Git Graph 확장자 설치
+좌측 메뉴바 위에서 세번째 소스컨트롤 누르기
+왼쪽 영역 상단에 깃 그래프 아이콘 버튼이 생김
+누르면 깃 허브 수정 내역을 확인 가능.
+
+---------------------------------------------------------
+
+D2Codeing 폰트
+https://github.com/naver/d2codingfont
+
+----------------------------------------------------------
+
+개발자용 terminal 화면 프로그램
+https://tabby.sh/
+
+----------------------------------------------------------
+
+DB를 사용하기 위해서는 application.properties (Gradle 기준)에 mybatis 설정 필요
+
+spring.datasource.url=jdbc:mysql://localhost:3306/board_crud?useSSL=false&serverTimezone=UTC
+spring.datasource.username=root
+spring.datasource.password=1234
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+mybatis.mapper-locations=classpath:mapper/*.xml
+
+
+

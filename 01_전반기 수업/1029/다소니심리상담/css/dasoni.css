@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'NanumSquare';
+}
+ul, li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+#wrapper{
+    width: 100%;
+}
+.hd_content{
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+/* 헤더 로고 */
+.hd_content .header_line{
+    background: url(../img/header_line.png) no-repeat center bottom;
+    background-size: 100% 2px;
+}
+.hd_content .header_line .logo{
+    width: 1000px;
+    margin: 0 auto;
+}
+.hd_content .header_line .logo > h1{
+    max-width: 252px;
+    line-height: 111px;
+    margin: auto;
+}
+.hd_content .header_line .logo > h1 > a > img{
+    vertical-align: middle;
+}
+/* 헤더 네비 */
+.hd_content .nav_wrap{
+    width: 100%;
+}
+.hd_content .nav_wrap .nav{
+    width: 100%;
+}
+.hd_content .nav > ul{
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.hd_content .nav > ul > li{
+    width: 20%;
+    z-index: 100;
+}
+.hd_content .nav > ul > li > a{
+    display: block;
+    padding: 16px 24px;
+    font-size: 1.000em;
+    font-weight: 600;
+    text-align: center;
+    color: #333;
+}
+.hd_content .nav ul li ul{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-top: 10px;
+    transition: all 0.4s;
+    display: none;
+    /* height: 0; */
+}
+.hd_content .nav ul li ul li{
+	width: 200px;
+	text-align: center;
+}
+.hd_content .nav ul li ul li a{
+    display: inline-block;
+    font-size: 1.000em;
+    padding: 14px 10px;
+    line-height: 1.2em;
+    color: #333;
+    font-weight: 500;
+    letter-spacing: -0.025em;
+}
+.hd_content .nav ul li ul li a:hover{
+    font-weight: bold;
+}
+.hd_content .nav ul li ul li:hover a{
+    background: url(../img/menu_hover.png) no-repeat 0 0;
+}
+
+.hd_content .nav_bg{
+    width: 100%;
+    height: 0px;
+    /* height: 335px; */
+    position: absolute;
+    left: 0px;
+    top: 161px;
+    background: #fff;
+    transition: all 0.4s;
+    z-index: 50;
+    border-top: 1px solid #e0e0e0;
+}
+.hd_content .nav_bg.open{
+    height: 335px;
+    background: #fff url(../img/header_line.png) no-repeat center top;
+    background-size: 100% 2px;
+    border-top: 0;
+}
+
+.slide_content{
+    /* position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%; */
+}

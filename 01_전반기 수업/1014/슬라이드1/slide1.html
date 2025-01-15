@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            width: 100%;
+            max-width: 1920px;
+            height: 200px;
+            margin: 0 auto;
+            background: #ccc;
+        }
+        .slide-container{
+            width: 100%;
+            max-width: 1920px;
+            height: 480px;
+            position: relative;
+        }
+        .slider{
+            display: flex;
+            transition: transform 0.5s;
+            /* transform: translateX(-100%); */
+        }
+        button{
+            cursor: pointer;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+
+    </header>
+
+    <div class="slide-container">
+        <div class="slider">
+            <div class="slide">
+                <img src="./images/slide1.jpg">
+            </div>
+            <div class="slide">
+                <img src="./images/slide2.jpg">
+            </div>
+            <div class="slide">
+                <img src="./images/slide3.jpg">
+            </div>
+        </div>
+        <button class="prev" onclick="prevSlide()">Provious</button>
+        <button class="next" onclick="nextSlide()">Next</button>
+    </div>
+
+    <script>
+
+        var slider = document.querySelector('.slider');
+        // querySelector : 일치하는 첫번째 요소 하나만 선택됨.
+        var slide = document.querySelectorAll('.slide');
+        // querySelectorAll : 일치하는 요소 전부 다 선택됨.
+
+        var currentIndex = 0;
+
+        
+        function showSlide(index){
+            currentIndex = index;
+            // alert(currentIndex);
+            var transformValue = -currentIndex * 100 + '%';
+            // alert(transformValue);
+            slider.style.transform = "translateX(" + transformValue + ")";
+        }
+
+        function nextSlide(){
+            showSlide(currentIndex + 1);
+        }
+        function prevSlide(){
+            showSlide(currentIndex - 1);
+        }
+        
+    </script>
+</body>
+</html>

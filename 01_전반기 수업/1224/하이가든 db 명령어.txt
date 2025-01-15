@@ -1,0 +1,33 @@
+1. db 생성.
+
+create database highgarden_db;
+
+2. 계정 생성 & 권한 부여
+
+CREATE USER 'highgarden_user'@'localhost' IDENTIFIED BY '1234';
+
+GRANT ALL PRIVILEGES ON highgarden_db.* TO 'highgarden_user'@'localhost';
+
+FLUSH privileges;
+
+3. table 생성 (2개).
+
+create table board_table(
+id bigint primary key auto_increment,
+boardTitle varchar(50),
+boardWriter varchar(20),
+boardPass varchar(20),
+boardContents varchar(500),
+boardHits int default 0,
+createdAt datetime default now(),
+fileAttached int default 0
+);
+
+create table board_file_table
+(
+    id	bigint auto_increment primary key,
+    originalFileName varchar(100),
+    storedFileName varchar(100),
+    boardId bigint,
+    constraint fk_board_file foreign key(boardId) references board_table(id) on delete cascade
+);

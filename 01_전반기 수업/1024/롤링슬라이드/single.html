@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        *{margin: 0;padding: 0;}
+        .wrap{
+            width: 1200px;
+            margin: 0 auto;
+            margin-top: 200px;
+        }
+        .big_banner{
+            width: 1200px;
+            height: 300px;
+            overflow: hidden;
+        }
+        ul.banner{
+            width: 4800px;
+            height: 300px;
+            /* transition: all 0.5s; */
+            /* 제이쿼리 애니메이트 사용할 땐 트랜지션 꼭 삭제 */
+            position: relative;
+            list-style: none; 
+            display: flex;
+            background: #fff;
+        }
+        li{
+            width: 1200px;
+        }
+        .btn .next img{
+            position: absolute;
+            top: 330px;
+            right: 400px;
+        }
+        .btn .prev img{
+            position: absolute;
+            top: 330px;
+            left: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="big_banner">
+            <ul class="banner">
+                <li><a href="#"><img src="./images/slide1.jpg"></a></li>
+                <li><a href="#"><img src="./images/slide2.jpg"></a></li>
+                <li><a href="#"><img src="./images/slide3.jpg"></a></li>
+            </ul>
+            <!-- 1200*300 -->
+            <div class="btn">
+                <p>
+                    <a href="#" class="prev">
+                        <img src="./images/prev_btn.png" alt="이전 버튼">
+                    </a>
+                    <a href="#" class="next">
+                        <img src="./images/next_btn.png" alt="다음 버튼">
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(function(){
+
+            var num = 0;
+            var width = 1200;
+            var copy = $('.banner li:lt(1)').clone();
+            //복사하기
+            $('.banner').append(copy);
+
+            //다음으로 가기 버튼
+            $('.next').click(function(){
+                if(num==3){
+                    num = 0;
+                    $('.banner').css('margin-left', 0);
+                }
+                num++;
+                $('.banner').stop().animate({'margin-left':-width*num}, 300);
+            });
+
+            //이전으로 가기 버튼
+            $('.prev').click(function(){
+                if(num==0){
+                    num = 3;
+                    $('.banner').css('margin-left', -width*num);
+                }
+                num--;
+                $('.banner').stop().animate({'margin-left':-width*num}, 300);
+            });
+
+            //자동 슬라이드
+            setInterval(autoplay,5000);
+
+            function autoplay(){
+                if(num==3){
+                    num = 0;
+                    $('.banner').css('margin-left', 0);
+                }
+                num++;
+                $('.banner').stop().animate({'margin-left':-width*num});
+            }
+
+        });
+
+    </script>
+</body>
+</html>

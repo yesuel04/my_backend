@@ -1,0 +1,83 @@
+/* 전체 */
+*{
+    margin: 0;
+    padding: 0;
+}
+#wrap{
+    margin: 0 auto;
+    width: 1000px;
+    height: 650px;
+    /* border: 5px solid #333; */
+    background-color: #eee;
+}
+/* 헤더 */
+header{
+    width: 200px;
+    height: 650px;
+    float: left;
+    background-color: aqua;
+}
+/* 메인 */
+#main{
+    width: 800px;
+    height: 650px;
+    background-color: #ddd;
+    float: left;
+}
+/* 이미지 슬라이드 */
+#img_slide{
+    width: 100%;
+    height: 350px;
+    background-color: blueviolet;
+}
+/* 섹션 */
+section{
+    width: 100%;
+    height: 200px;
+    background-color: #ccc;
+}
+/* 아티클 */
+section>article{
+    float: left;
+}
+/* 아티클 안의 클래스들 */
+.notice{
+    width: 33.33%;
+    height: 200px;
+    background-color: brown;
+}
+.banner{
+    width: 33.33%;
+    height: 200px;
+    background-color: burlywood;
+}
+.icons{
+    width: 33.33%;
+    height: 200px;
+    background-color: cadetblue;
+}
+/* 푸터 */
+footer{
+    width: 100%;
+    height: 100px;
+    background-color: #bbb;
+}
+footer>article{
+    float: left;
+}
+/* 푸터 안의 클래스들 */
+.f_logo{
+    width: 200px;
+    height: 100px;
+    background-color: coral;
+}
+.f_menu{
+    width: 600px;
+    height: 50px;
+    background-color: crimson;
+}
+.f_copy{
+    width: 600px;
+    height: 50px;
+    background-color: cornflowerblue;
+}

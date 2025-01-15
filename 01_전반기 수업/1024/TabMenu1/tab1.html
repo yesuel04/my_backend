@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        .tab{
+            display: flex;
+            list-style: none;
+        }
+        .tab li{
+            background: #fff;
+        }
+        .tab li.on{
+            background: red;
+        }
+
+        .tab_list div{background: #fff;}
+        .tab_list div.on{background: red;}
+    </style>
+
+    <script>
+        $(function(){
+            $('.tab li').click(function(){
+                var i = $(this).index();
+                // alert(i);
+                $('.tab li').removeClass('on');
+                $('.tab li').eq(i).addClass('on');
+                $('.tab_list div').removeClass('on');
+                $('.tab_list div').eq(i).addClass('on');
+
+            });
+        });
+    </script>
+</head>
+<body>
+    <ul class="tab">
+        <li>1번 항목</li>
+        <li>2번 항목</li>
+        <li>3번 항목</li>
+    </ul>
+    <div class="tab_list">
+        <div>1번 항목 내용 입력.</div>
+        <div>2번 항목 내용 입력.</div>
+        <div>3번 항목 내용 입력.</div>
+    </div>
+</body>
+</html>

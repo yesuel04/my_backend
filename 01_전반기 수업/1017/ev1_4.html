@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #btn1{
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            border:  2px solid #333;
+            border-radius: 5px;
+            background: #f1f1f1;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <div id="btn1">button</div>
+    <script>
+        // var change = document.querySelector('#btn1');
+            
+        // change.addEventListener('mouseover', function(){
+        //     change.style.backgroundColor='#111';
+        //     change.style.color='#fff';
+        // });
+        // change.addEventListener('mouseout', function(){
+        //     change.style.backgroundColor='';
+        //     change.style.color='';
+        // });
+
+        let btn = document.querySelector('#btn1');
+
+        btn.addEventListener('mouseover', color1);
+        btn.addEventListener('mouseout', color2);
+
+
+        function color1(){
+            btn.style.backgroundColor='#111';
+            btn.style.color='#fff';
+        }
+
+        function color2(){
+            btn.style.backgroundColor='';
+            btn.style.color='';
+        }
+    </script>
+</body>
+</html>

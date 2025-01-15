@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var greenArr = ["교대", "방배", "강남"];
+        var yellowArr = ["미금", "정자", "수서"];
+
+        greenArr.splice(2,1,"서초","역삼"); 
+        console.log(greenArr); // 교대 방배 서초 역삼
+
+        var data1 = yellowArr.pop(); // data1 "수서" 저장.
+        var data2 = yellowArr.shift(); // data2 "미금" 저장.
+        // yellowArr 에는 "정자"만 저장된 상태.
+
+        yellowArr.push(data2); //data2를 yellowArr 뒤에 밀어넣는다.
+        console.log(yellowArr); // 정자 미금
+
+        yellowArr.unshift(data1); //data1을 yellowArr 앞에 밀어넣는다.
+        console.log(yellowArr); // 수서 정자 미금
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

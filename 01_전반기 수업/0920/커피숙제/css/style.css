@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.wrap{
+    width: 900px;
+    margin: 0 auto;
+}
+header{
+    background-image: url(../images/top2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    overflow: hidden;
+}
+header .logo{
+    float: right;
+    color: #fff;
+    margin: 200px 50px 0 0;
+}
+nav{
+    height: 70px;
+    background-color: #270000;
+}
+nav ul{
+    list-style: none;
+}
+nav ul li{
+    float: left;
+    margin-left: 23px;
+    margin-top: 15px;
+}
+nav ul li a{
+    text-decoration: none;
+    display: block;
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid #fff;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    font-weight: bold;
+}
+nav ul li a:hover{
+    background-color: #fff;
+    color: #000;
+    text-decoration: underline;
+}
+.content{
+    overflow: hidden;
+}
+section{
+    width: 650px;
+    height: 520px;
+    float: left;
+    background-color: #ccc;
+}
+section h3{
+    text-align: center;
+    margin: 20px 0 10px;
+}
+article{
+    width: 270px;
+    height: 180px;
+    float: left;
+    border: 1px solid #333;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+article:hover{
+    background-color: rgba(185, 255, 190, 0.5);
+}
+article h4{
+    background: url(../images/kong.png);
+    background-repeat: no-repeat;
+    margin-bottom: 10px;
+    padding-left: 30px;
+}
+article p{
+    line-height: 25px;
+}
+aside{
+    width: 250px;
+    height: 520px;
+    float: right;
+    background-color: #866c46;
+}
+aside h3{
+    text-align: center;
+    margin: 20px 0 10px;
+}
+aside img{
+    width: 200px;
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+footer{
+    height: 60px;
+    line-height: 60px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}

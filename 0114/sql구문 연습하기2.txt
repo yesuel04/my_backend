@@ -1,0 +1,63 @@
+< sql구문 연습하기 : 뉴스 기사 >
+
+create database news_db;
+use news_db;
+
+create table Reporter(
+employee_id varchar(20) not null primary key,
+name varchar(10) not null comment '실명을 사용',
+department varchar(20) null,
+hire_date datetime null,
+contact varchar(15) null
+);
+
+create table Article(
+article_id bigint not null auto_increment primary key,
+title varchar(500) not null,
+content text null,
+created_at timestamp default current_timestamp(),
+reporter_id varchar(20) not null comment '기자(FK)',
+view_count int default 0
+);
+
+create table Reader(
+reader_id varchar(20) not null primary key,
+name varchar(10) not null comment '실명을 사용',
+email varchar(50) not null comment '이메일 인증',
+join_date timestamp default current_timestamp()
+);
+
+create table Comment(
+comment_id bigint not null auto_increment primary key,
+article_id bigint not null,
+reader_id varchar(20) not null,
+content text not null,
+created_at timestamp default current_timestamp()
+);
+
+create table Category(
+category_id int not null auto_increment primary key,
+category_name varchar(100) not null,
+description varchar(1000) null
+);
+
+create table Article_Category(
+article_id bigint not null,
+category_id int not null,
+primary key(article_id, category_id)
+);
+
+alter table Article
+add foreign key (reporter_id) references Reporter(employee_id);
+
+alter table Comment
+add foreign key (article_id) references Article(article_id);
+
+alter table Comment
+add foreign key (reader_id) references Reader(reader_id);
+
+alter table Article_Category
+add foreign key (article_id) references Article(article_id);
+
+alter table Article_Category
+add foreign key (category_id) references Category(category_id);

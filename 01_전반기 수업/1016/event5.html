@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img:hover{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <img src="./images/easys-1.jpg" id="cover">
+    </div>
+    
+    <script>
+        // 1번
+        // var cover = document.querySelector('#cover');
+        // cover.addEventListener("mouseover", function(){
+        //     cover.src = "./images/easys-2.jpg"
+        // });
+        // cover.addEventListener("mouseout", function(){
+        //     cover.src = "./images/easys-1.jpg"
+        // });
+
+
+        // 2번
+        var cover = document.querySelector('#cover');
+
+        cover.addEventListener("mouseover", changePic);
+        cover.addEventListener("mouseout", originPic);
+
+        function changePic(){
+            cover.src = "./images/easys-2.jpg";
+        }
+        function originPic(){
+            cover.src = "./images/easys-1.jpg";
+        }
+    </script>
+    
+</body>
+</html>
